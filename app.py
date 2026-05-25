@@ -1,11 +1,9 @@
 import os
-import csv
 import numpy as np
 import pandas as pd
-from flask import Flask, render_template, request, jsonify, session
-from sklearn.preprocessing import StandardScaler, LabelEncoder
+from flask import Flask, render_template, request, jsonify
+from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
-from sklearn.metrics.pairwise import euclidean_distances
 import json
 
 app = Flask(__name__)
