@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMatch - Sistema de Recomendação de Veículos</title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js">
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background: #0f172a;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateY(-2px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-border {
+            position: relative;
+        }
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+            z-index: -1;
+            opacity: 0.5;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1, #7c3aed);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+        }
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .input-field {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .input-field:focus {
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+            outline: none;
+        }
+        .range-slider {
+            -webkit-appearance: none;
+            height: 6px;
+            border-radius: 3px;
+            background: linear-gradient(90deg, #6366f1, #a855f7);
+        }
+        .range-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            border: 3px solid #6366f1;
+            cursor: pointer;
+        }
+        .badge {
+            transition: all 0.3s ease;
+        }
+        .badge:hover {
+            transform: scale(1.05);
+        }
+        .score-ring {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            position: relative;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+        .animate-slide-up {
+            animation: slideUp 0.5s ease forwards;
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s ease infinite;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes pulse {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        .loading-spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid rgba(99, 102, 241, 0.2);
+            border-top-color: #6366f1;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(30, 41, 59, 0.3);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #6366f1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7c3aed;
+        }
+        .cluster-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .vehicle-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .vehicle-card:hover {
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="text-gray-100 min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 py-6">
+        <header class="flex items-center justify-between mb-8 animate-fade-in">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-indigo-500/20">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold gradient-text">AutoMatch</h1>
+                    <p class="text-gray-400 text-sm">Sistema Inteligente de Recomendação de Veículos</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-gray-400">
+                <span class="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                    <i class="fas fa-robot mr-1"></i> ML + Clusterização
+                </span>
+            </div>
+        </header>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <div class="lg:col-span-4">
+                <div class="glass-card rounded-2xl p-6 animate-slide-up">
+                    <div class="flex items-center gap-2 mb-6">
+                        <i class="fas fa-sliders-h text-indigo-400"></i>
+                        <h2 class="text-lg font-semibold">Suas Preferências</h2>
+                    </div>
+                    <form id="formPreferencias" class="space-y-5">
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-2">
+                                <i class="fas fa-tag mr-1"></i> Faixa de Preço (R$)
+                            </label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <input type="number" id="preco_min" placeholder="Mínimo" value="0"
+                                class="input-field rounded-xl px-4 py-2.5 text-sm w-full text-gray-200">
+                                <input type="number" id="preco_max" placeholder="Máximo" value="500000"
+                                class="input-field rounded-xl px-4 py-2.5 text-sm w-full text-gray-200">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-2">
+                                <i class="fas fa-calendar mr-1"></i> Ano
+                            </label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <input type="number" id="ano_min" placeholder="Mínimo" value="2010"
+                                class="input-field rounded-xl px-4 py-2.5 text-sm w-full text-gray-200">
+                                <input type="number" id="ano_max" placeholder="Máximo" value="2025"
+                                class="input-field rounded-xl px-4 py-2.5 text-sm w-full text-gray-200">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-2">
+                                <i class="fas fa-car-side mr-1"></i> Categoria
+                            </label>
+                            <div id="categoriaContainer" class="space-y-1.5 max-h-32 overflow-y-auto pr-1">
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="categoria-chk" value="" checked data-all>
+                                    <span>Todas</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="categoria-chk" value="Economico">
+                                    <span>Econômico</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="categoria-chk" value="Sedan">
+                                    <span>Sedan</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="categoria-chk" value="SUV">
+                                    <span>SUV</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="categoria-chk" value="Picape">
+                                    <span>Picape</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="categoria-chk" value="Eletrico">
+                                    <span>Elétrico</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="categoria-chk" value="Comercial">
+                                    <span>Comercial</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-400 mb-2">
+                                <i class="fas fa-industry mr-1"></i> Marca
+                            </label>
+                            <div id="marcaContainer" class="grid grid-cols-2 gap-x-2 gap-y-1 max-h-40 overflow-y-auto pr-1">
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="" checked data-all>
+                                    <span>Todas</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Fiat"> <span>Fiat</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Volkswagen"> <span>Volkswagen</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Chevrolet"> <span>Chevrolet</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Toyota"> <span>Toyota</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Honda"> <span>Honda</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Hyundai"> <span>Hyundai</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Renault"> <span>Renault</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Jeep"> <span>Jeep</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Nissan"> <span>Nissan</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="BYD"> <span>BYD</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="BMW"> <span>BMW</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Mercedes"> <span>Mercedes</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Audi"> <span>Audi</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Ford"> <span>Ford</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Peugeot"> <span>Peugeot</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Citroën"> <span>Citroën</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="GWM"> <span>GWM</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Caoa Chery"> <span>Caoa Chery</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Land Rover"> <span>Land Rover</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Volvo"> <span>Volvo</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Porsche"> <span>Porsche</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-sm text-gray-300 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="marca-chk" value="Mitsubishi"> <span>Mitsubishi</span>
+                                </label>
+                            </div>
+                        </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2">
+                            <i class="fas fa-gas-pump mr-1"></i> Combustível
+                        </label>
+                        <select id="combustivel" class="input-field rounded-xl px-4 py-2.5 text-sm w-full text-gray-200">
+                            <option value="">Qualquer</option>
+                            <option value="flexivel">Flex</option>
+                            <option value="diesel">Diesel</option>
+                            <option value="eletrico">Elétrico</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2">
+                            <i class="fas fa-cog mr-1"></i> Câmbio
+                        </label>
+                        <select id="cambio" class="input-field rounded-xl px-4 py-2.5 text-sm w-full text-gray-200">
+                            <option value="">Qualquer</option>
+                            <option value="manual">Manual</option>
+                            <option value="automatico">Automático</option>
+                            <option value="cvt">CVT</option>
+                            <option value="automatica">Automática</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2">
+                            <i class="fas fa-weight mr-1"></i> Prioridades
+                        </label>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between text-xs text-gray-400 mb-1">
+                                    <span>Economia</span>
+                                    <span id="peso_consumo_val">5</span>
+                                </div>
+                                <input type="range" id="peso_consumo" min="1" max="10" value="5"
+                                class="range-slider w-full">
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs text-gray-400 mb-1">
+                                    <span>Desempenho</span>
+                                    <span id="peso_potencia_val">5</span>
+                                </div>
+                                <input type="range" id="peso_potencia" min="1" max="10" value="5"
+                                class="range-slider w-full">
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs text-gray-400 mb-1">
+                                    <span>Custo-Benefício</span>
+                                    <span id="peso_preco_val">5</span>
+                                </div>
+                                <input type="range" id="peso_preco" min="1" max="10" value="5"
+                                class="range-slider w-full">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm text-gray-400 mb-2">
+                            <i class="fas fa-list-ol mr-1"></i> Quantidade de Resultados
+                        </label>
+                        <select id="top_n" class="input-field rounded-xl px-4 py-2.5 text-sm w-full text-gray-200">
+                            <option value="5">5 veículos</option>
+                            <option value="10">10 veículos</option>
+                            <option value="20" selected>20 veículos</option>
+                            <option value="50">50 veículos</option>
+                        </select>
+                    </div>
+                    <button type="submit"
+                    class="btn-primary w-full py-3.5 rounded-xl text-white font-semibold text-sm flex items-center justify-center gap-2 mt-2">
+                    <i class="fas fa-magic"></i>
+                    <span>Recomendar Veículos</span>
+                </button>
+            </form>
+        </div>
+        <div class="glass-card rounded-2xl p-6 mt-6 animate-slide-up" style="animation-delay: 0.1s;">
+            <div class="flex items-center gap-2 mb-4">
+                <i class="fas fa-chart-pie text-indigo-400"></i>
+                <h3 class="text-sm font-semibold">Dashboard do Dataset</h3>
+            </div>
+            <div id="dashboardContent" class="space-y-4">
+                <div class="text-center py-4">
+                    <div class="loading-spinner mx-auto"></div>
+                    <p class="text-xs text-gray-500 mt-2">Carregando dados...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lg:col-span-8">
+        <div id="resultadosArea" class="hidden">
+            <div class="glass-card rounded-2xl p-6 mb-6 animate-fade-in" id="statsBar">
+            </div>
+            <div id="clusterChartArea" class="glass-card rounded-2xl p-6 mb-6 animate-fade-in hidden">
+                <div class="flex items-center gap-2 mb-4">
+                    <i class="fas fa-chart-bar text-indigo-400"></i>
+                    <h3 class="text-sm font-semibold">Distribuição por Cluster</h3>
+                </div>
+                <div id="clusterNumeros" class="flex flex-wrap gap-2 mb-4"></div>
+                <canvas id="clusterChart" height="120"></canvas>
+            </div>
+            <div id="resultadosLista" class="space-y-4">
+            </div>
+        </div>
+        <div id="emptyState" class="glass-card rounded-2xl p-16 text-center animate-fade-in">
+            <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center text-4xl">
+                <i class="fas fa-car-side gradient-text"></i>
+            </div>
+            <h2 class="text-2xl font-bold gradient-text mb-3">Encontre o Veículo Ideal</h2>
+            <p class="text-gray-400 max-w-md mx-auto mb-6 text-sm">
+                Preencha suas preferências ao lado e clique em <strong>"Recomendar Veículos"</strong>.
+                Nosso algoritmo de machine learning com clusterização vai analisar e ranquear
+                as melhores opções para você.
+            </p>
+            <div class="flex justify-center gap-6 text-xs text-gray-500">
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto mb-2 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400">
+                        <i class="fas fa-robot text-lg"></i>
+                    </div>
+                    ML + Clusterização
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto mb-2 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400">
+                        <i class="fas fa-trophy text-lg"></i>
+                    </div>
+                    Score Inteligente
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto mb-2 rounded-lg bg-pink-500/10 flex items-center justify-center text-pink-400">
+                        <i class="fas fa-chart-line text-lg"></i>
+                    </div>
+                    Ranking em Tempo Real
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="text-center text-gray-500 text-xs py-8 mt-8 border-t border-gray-800/50">
+    <p>AutoMatch 2024 - Sistema de Recomendação de Veículos com Machine Learning</p>
+</footer>
+</div>
+
+<script>
+    const CORES_CLUSTER = ['#6366f1', '#a855f7', '#ec4899', '#f59e0b', '#10b981', '#06b6d4', '#f97316', '#84cc16'];
+    let chartInstance = null;
+
+    document.querySelectorAll('input[type="range"]').forEach(slider => {
+        slider.addEventListener('input', function() {
+            const valId = this.id + '_val';
+            const el = document.getElementById(valId);
+            if (el) el.textContent = this.value;
+        });
+    });
+
+    function exibirResultados(data) {
+        const area = document.getElementById('resultadosArea');
+        const empty = document.getElementById('emptyState');
+        area.classList.remove('hidden');
+        empty.classList.add('hidden');
+        const { resultados, stats, veiculos_semelhantes } = data;
+        const statsBar = document.getElementById('statsBar');
+        statsBar.innerHTML = `
+            <div class="flex items-center justify-between flex-wrap gap-4">
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-2 text-sm">
+                        <i class="fas fa-database text-indigo-400"></i>
+                        <span class="text-gray-400">${stats.total_analisados} veículos analisados</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                        <i class="fas fa-layer-group text-purple-400"></i>
+                        <span class="text-gray-400">${stats.num_clusters} clusters</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm">
+                        <i class="fas fa-arrow-up text-green-400"></i>
+                        <span class="text-gray-400">Score máx: <strong class="text-green-400">${stats.score_max}</strong></span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2 text-sm bg-indigo-500/10 px-4 py-2 rounded-xl border border-indigo-500/20">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <span class="text-gray-300">Score médio: <strong>${stats.score_medio}</strong></span>
+                </div>
+            </div>
+        `;
+        const lista = document.getElementById('resultadosLista');
+        let html = '';
+        resultados.forEach((v, i) => {
+            const scorePercent = Math.min(100, (v.score / 100) * 100);
+            const scoreColor = scorePercent >= 80 ? '#10b981' : scorePercent >= 60 ? '#f59e0b' : scorePercent >= 40 ?
+                '#f97316' : '#ef4444';
+            const ehEletrico = v.tipo_combustivel === 'eletrico';
+            const kmDisplay = ehEletrico ? `${v.km_por_litro_cidade} km/kWh` :
+                `${v.km_por_litro_cidade} km/l`;
+            const cilDisplay = v.cilindradas > 0 ? `${v.cilindradas} cc` : 'Elétrico';
+            const corCluster = CORES_CLUSTER[v.cluster_id % CORES_CLUSTER.length];
+            const ehUsado = v.km_medio > 0;
+            const badgeUsado = ehUsado ?
+                `<span class="px-2 py-0.5 rounded-full text-xs bg-yellow-500/20 text-yellow-400 border border-yellow-500/30">Usado</span>` :
+                `<span class="px-2 py-0.5 rounded-full text-xs bg-green-500/20 text-green-400 border border-green-500/30">0 km</span>`;
+            const similares = veiculos_semelhantes[v.veiculo_id] || [];
+            const similarBadges = similares.length > 0 ?
+                `<div class="flex items-center gap-1 mt-2 text-xs text-gray-500"><i class="fas fa-link text-indigo-400"></i> ${similares.length} veículos similares no cluster</div>` :
+                '';
+            html += `
+                <div class="vehicle-card glass-card rounded-2xl p-5 animate-fade-in" style="animation-delay: ${i * 0.05}s">
+                    <div class="flex items-start justify-between gap-4">
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="text-xs font-medium text-gray-500">#${v.veiculo_id}</span>
+                                ${badgeUsado}
+                            </div>
+                            <h3 class="text-lg font-bold text-white truncate">${v.nome}</h3>
+                            <div class="flex items-center gap-2 text-sm text-gray-400 mt-1">
+                                <span class="flex items-center gap-1">
+                                    <i class="fas fa-industry text-indigo-400 text-xs"></i> ${v.marca}
+                                </span>
+                                <span class="text-gray-600">|</span>
+                                <span class="flex items-center gap-1">
+                                    <i class="fas fa-tag text-purple-400 text-xs"></i> ${v.categoria}
+                                </span>
+                                <span class="text-gray-600">|</span>
+                                <span class="flex items-center gap-1">
+                                    <i class="fas fa-calendar text-pink-400 text-xs"></i> ${v.ano}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="text-center flex-shrink-0">
+                            <div class="score-ring" style="background: conic-gradient(${scoreColor} ${scorePercent}%, rgba(255,255,255,0.05) ${scorePercent}%);">
+                                <div class="w-[52px] h-[52px] rounded-full bg-slate-800 flex items-center justify-center text-sm font-bold" style="color: ${scoreColor}">
+                                    ${v.score.toFixed(1)}
+                                </div>
+                            </div>
+                            <div class="text-xs text-gray-500 mt-1">Score</div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mt-4">
+                        <div class="bg-white/5 rounded-xl px-3 py-2.5">
+                            <div class="text-xs text-gray-500">Preço</div>
+                            <div class="text-sm font-semibold text-white">R$ ${v.preco.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</div>
+                        </div>
+                        <div class="bg-white/5 rounded-xl px-3 py-2.5">
+                            <div class="text-xs text-gray-500">Consumo</div>
+                            <div class="text-sm font-semibold text-white">${kmDisplay}</div>
+                        </div>
+                        <div class="bg-white/5 rounded-xl px-3 py-2.5">
+                            <div class="text-xs text-gray-500">Potência</div>
+                            <div class="text-sm font-semibold text-white">${v.potencia_cv} cv</div>
+                        </div>
+                        <div class="bg-white/5 rounded-xl px-3 py-2.5">
+                            <div class="text-xs text-gray-500">Motor</div>
+                            <div class="text-sm font-semibold text-white">${cilDisplay}</div>
+                        </div>
+                        <div class="bg-white/5 rounded-xl px-3 py-2.5">
+                            <div class="text-xs text-gray-500">Cluster</div>
+                            <div class="text-sm font-semibold flex items-center gap-1.5">
+                                <span class="cluster-dot" style="background: ${corCluster}"></span>
+                                <span>Cluster ${v.cluster_id}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between mt-3 pt-3 border-t border-white/5">
+                        <div class="flex items-center gap-3 text-xs text-gray-500">
+                            <span><i class="fas fa-gas-pump mr-1"></i> ${v.tipo_combustivel}</span>
+                            <span><i class="fas fa-cog mr-1"></i> ${v.cambio}</span>
+                            <span><i class="fas fa-palette mr-1"></i> ${v.cor}</span>
+                        </div>
+                        ${similarBadges}
+                    </div>
+                </div>
+            `;
+        });
+        lista.innerHTML = html;
+            if (stats.clusters_resumo && stats.clusters_resumo.length > 0) {
+            const chartArea = document.getElementById('clusterChartArea');
+            chartArea.classList.remove('hidden');
+            const clusterNumeros = document.getElementById('clusterNumeros');
+            clusterNumeros.innerHTML = stats.clusters_resumo.map((c, i) =>
+                `<span class="px-3 py-1.5 rounded-lg text-sm font-semibold flex items-center gap-1.5" style="background:${CORES_CLUSTER[i % CORES_CLUSTER.length]}20; border:1px solid ${CORES_CLUSTER[i % CORES_CLUSTER.length]}40">
+                    <span class="w-2.5 h-2.5 rounded-full" style="background:${CORES_CLUSTER[i % CORES_CLUSTER.length]}"></span>
+                    Cluster ${c.cluster_id}: <strong>${c.count}</strong>
+                </span>`
+            ).join('');
+            if (chartInstance) chartInstance.destroy();
+            const canvas = document.getElementById('clusterChart');
+            const parent = canvas.parentNode;
+            const novoCanvas = document.createElement('canvas');
+            novoCanvas.id = 'clusterChart';
+            novoCanvas.height = 120;
+            novoCanvas.style.width = '100%';
+            parent.replaceChild(novoCanvas, canvas);
+            const ctx = novoCanvas.getContext('2d');
+            chartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: stats.clusters_resumo.map(c => `Cluster ${c.cluster_id}`),
+                    datasets: [{
+                        label: 'Veículos',
+                        data: stats.clusters_resumo.map(c => c.count),
+                        backgroundColor: stats.clusters_resumo.map((_, i) =>
+                            CORES_CLUSTER[i % CORES_CLUSTER.length] + '80'),
+                        borderColor: stats.clusters_resumo.map((_, i) =>
+                            CORES_CLUSTER[i % CORES_CLUSTER.length]),
+                        borderWidth: 1,
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(ctx) { return ctx.raw + ' veículos'; }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: { color: '#94a3b8' },
+                            grid: { display: false }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            ticks: { color: '#94a3b8', stepSize: 1 },
+                            grid: { color: 'rgba(255,255,255,0.03)' }
+                        }
+                    }
+                }
+            });
+        }
+        document.getElementById('resultadosArea').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function carregarDashboard() {
+        const container = document.getElementById('dashboardContent');
+        fetch('/api/dashboard')
+            .then(r => r.json())
+            .then(d => {
+                container.innerHTML = `
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="bg-white/5 rounded-xl p-3 text-center">
+                            <div class="text-lg font-bold gradient-text">${d.total_veiculos}</div>
+                            <div class="text-xs text-gray-500">Veículos</div>
+                        </div>
+                        <div class="bg-white/5 rounded-xl p-3 text-center">
+                            <div class="text-lg font-bold gradient-text">${d.total_marcas}</div>
+                            <div class="text-xs text-gray-500">Marcas</div>
+                        </div>
+                        <div class="bg-white/5 rounded-xl p-3 text-center">
+                            <div class="text-lg font-bold gradient-text">${d.total_categorias}</div>
+                            <div class="text-xs text-gray-500">Categorias</div>
+                        </div>
+                        <div class="bg-white/5 rounded-xl p-3 text-center">
+                            <div class="text-lg font-bold gradient-text">R$ ${(d.preco_medio/1000).toFixed(1)}k</div>
+                            <div class="text-xs text-gray-500">Preço Médio</div>
+                        </div>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-3">
+                        <div class="text-xs text-gray-400 mb-2">Categorias</div>
+                        <div class="flex flex-wrap gap-1.5">
+                            ${Object.entries(d.distribuicao_categoria).map(([cat, qtd]) =>
+                                `<span class="px-2 py-0.5 rounded-full text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">${cat} (${qtd})</span>`
+                            ).join('')}
+                        </div>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-3">
+                        <div class="text-xs text-gray-400 mb-2">Top Marcas</div>
+                        <div class="flex flex-wrap gap-1.5">
+                            ${Object.entries(d.distribuicao_marca).map(([marca, qtd]) =>
+                                `<span class="px-2 py-0.5 rounded-full text-xs bg-purple-500/10 text-purple-400 border border-purple-500/20">${marca} (${qtd})</span>`
+                            ).join('')}
+                        </div>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-3">
+                        <div class="text-xs text-gray-400 mb-2">Combustíveis</div>
+                        <div class="flex flex-wrap gap-1.5">
+                            ${Object.entries(d.distribuicao_combustivel).map(([comb, qtd]) =>
+                                `<span class="px-2 py-0.5 rounded-full text-xs bg-green-500/10 text-green-400 border border-green-500/20">${comb} (${qtd})</span>`
+                            ).join('')}
+                        </div>
+                    </div>
+                `;
+            })
+            .catch(() => {
+                container.innerHTML = `<div class="text-center text-gray-500 text-sm py-4">Erro ao carregar dashboard</div>`;
+            });
+    }
+
+    function getMultiSelectValues(className) {
+        const chks = document.querySelectorAll('.' + className);
+        const allChk = document.querySelector('.' + className + '[data-all]');
+        if (allChk && allChk.checked) return '';
+        const vals = [];
+        chks.forEach(c => { if (c.checked && !c.dataset.all) vals.push(c.value); });
+        return vals.join(',');
+    }
+
+    document.querySelectorAll('[data-all]').forEach(chk => {
+        chk.addEventListener('change', function() {
+            const parent = this.closest('[id$=Container]') || this.parentElement.parentElement;
+            parent.querySelectorAll('input[type=checkbox]:not([data-all])').forEach(c => c.checked = !this.checked);
+        });
+    });
+
+    document.querySelectorAll('.categoria-chk:not([data-all]), .marca-chk:not([data-all])').forEach(chk => {
+        chk.addEventListener('change', function() {
+            const parent = this.closest('[id$=Container]');
+            const allChk = parent.querySelector('[data-all]');
+            const anyUnchecked = Array.from(parent.querySelectorAll('input[type=checkbox]:not([data-all])')).some(c => !c.checked);
+            if (!anyUnchecked) { allChk.checked = true; }
+            else { allChk.checked = false; }
+        });
+    });
+
+    document.getElementById('formPreferencias').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = this.querySelector('button[type="submit"]');
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        btn.innerHTML = '<div class="loading-spinner w-5 h-5 border-2"></div><span>Processando...</span>';
+        const data = {
+            preco_min: parseFloat(document.getElementById('preco_min').value) || 0,
+            preco_max: parseFloat(document.getElementById('preco_max').value) || 500000,
+            ano_min: parseInt(document.getElementById('ano_min').value) || 2010,
+            ano_max: parseInt(document.getElementById('ano_max').value) || 2025,
+            categoria: getMultiSelectValues('categoria-chk'),
+            marca: getMultiSelectValues('marca-chk'),
+            combustivel: document.getElementById('combustivel').value,
+            cambio: document.getElementById('cambio').value,
+            peso_consumo: parseInt(document.getElementById('peso_consumo').value) || 5,
+            peso_potencia: parseInt(document.getElementById('peso_potencia').value) || 5,
+            peso_preco: parseInt(document.getElementById('peso_preco').value) || 5,
+            top_n: parseInt(document.getElementById('top_n').value) || 20
+        };
+        try {
+            const resp = await fetch('/recomendar', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            if (!resp.ok) throw new Error('Erro na requisição');
+            const json = await resp.json();
+            exibirResultados(json);
+        } catch (err) {
+            alert('Erro ao processar recomendação: ' + err.message);
+        } finally {
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+        }
+    });
+    carregarDashboard();
+</script>
+</body>
+</html>
