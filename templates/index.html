@@ -483,6 +483,7 @@
 </div>
 <footer class="text-center text-gray-500 text-xs py-8 mt-8 border-t border-gray-800/50">
     <p>AutoMatch 2024 - Sistema de Recomendação de Veículos com Machine Learning</p>
+    <p class="mt-1">Fontes: Preços baseados na Tabela FIPE | Especificações: Fabricantes / INMETRO</p>
 </footer>
 </div>
 
@@ -580,7 +581,7 @@
                     </div>
                     <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mt-4">
                         <div class="bg-white/5 rounded-xl px-3 py-2.5">
-                            <div class="text-xs text-gray-500">Preço</div>
+                            <div class="text-xs text-gray-500 flex items-center gap-1">Preço <span class="px-1.5 py-0.5 rounded text-[10px] bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">${v.fonte_preco || 'FIPE'}</span></div>
                             <div class="text-sm font-semibold text-white">R$ ${v.preco.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</div>
                         </div>
                         <div class="bg-white/5 rounded-xl px-3 py-2.5">
@@ -592,7 +593,7 @@
                             <div class="text-sm font-semibold text-white">${v.potencia_cv} cv</div>
                         </div>
                         <div class="bg-white/5 rounded-xl px-3 py-2.5">
-                            <div class="text-xs text-gray-500">Motor</div>
+                            <div class="text-xs text-gray-500 flex items-center gap-1">Motor <span class="px-1.5 py-0.5 rounded text-[10px] bg-green-500/20 text-green-400 border border-green-500/30">${v.fonte_especificacoes || 'Fabricante'}</span></div>
                             <div class="text-sm font-semibold text-white">${cilDisplay}</div>
                         </div>
                         <div class="bg-white/5 rounded-xl px-3 py-2.5">

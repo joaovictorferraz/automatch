@@ -171,16 +171,18 @@ for base in veiculos:
         else:
             cambio_val = random.choice(cambios_por_tipo["flexivel"])
         
+        fonte_preco = "Tabela FIPE (estimado)" if combustivel != "eletrico" else "Fabricante"
         rows.append([
             id_counter, nome, marca, categoria, ano, preco, preco * 1.025,
             consumo_cidade, consumo_estrada, potencia, cilindradas,
-            portas, lugares, combustivel, cambio_val, cor, km
+            portas, lugares, combustivel, cambio_val, cor, km,
+            fonte_preco, "Fabricante / INMETRO"
         ])
         id_counter += 1
 
 with open("dataset/vehicles.csv", "w", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)
-    writer.writerow(["id","nome","marca","categoria","ano","preco","preco_medio","km_por_litro_cidade","km_por_litro_estrada","potencia_cv","cilindradas","portas","lugares","tipo_combustivel","cambio","cor","km_medio"])
+    writer.writerow(["id","nome","marca","categoria","ano","preco","preco_medio","km_por_litro_cidade","km_por_litro_estrada","potencia_cv","cilindradas","portas","lugares","tipo_combustivel","cambio","cor","km_medio","fonte_preco","fonte_especificacoes"])
     writer.writerows(rows)
 
 print(f"Gerados {len(rows)} veículos!")

@@ -121,6 +121,8 @@ def calcular_score_compatibilidade(df, preferencias):
             'cambio': row['cambio'],
             'cor': row['cor'],
             'km_medio': int(row['km_medio']),
+            'fonte_preco': row.get('fonte_preco', 'Tabela FIPE'),
+            'fonte_especificacoes': row.get('fonte_especificacoes', 'Fabricante / INMETRO'),
             'cluster_id': int(row['cluster_id']) if pd.notna(row.get('cluster_id')) else None,
             'score': score_final
         })
