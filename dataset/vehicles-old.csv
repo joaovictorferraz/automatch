@@ -1,0 +1,478 @@
+id,nome,marca,categoria,ano,preco,preco_medio,km_por_litro_cidade,km_por_litro_estrada,potencia_cv,cilindradas,portas,lugares,tipo_combustivel,cambio,cor,km_medio,fonte_preco,fonte_especificacoes
+1,Fiat Uno GLX,Fiat,Economico,2010,41000.0,42024.99999999999,12.5,14.7,66,999,4,5,flexivel,automatico,marrom,22790,Tabela FIPE (estimado),Fabricante / INMETRO
+2,Fiat Uno GL,Fiat,Economico,2010,16000.0,16400.0,12.4,15.5,65,999,4,5,flexivel,cvt,marrom,52124,Tabela FIPE (estimado),Fabricante / INMETRO
+3,Fiat Uno GT,Fiat,Economico,2018,29700.0,30442.499999999996,12.9,15.6,78,999,4,5,flexivel,cvt,branco,198916,Tabela FIPE (estimado),Fabricante / INMETRO
+4,Fiat Mobi 1.6,Fiat,Economico,2021,37800.0,38745.0,12.9,16.8,67,999,4,5,flexivel,automatico,preto,99595,Tabela FIPE (estimado),Fabricante / INMETRO
+5,Fiat Mobi 1.4,Fiat,Economico,2021,41000.0,42024.99999999999,14.1,18.3,74,999,4,5,flexivel,cvt,preto,99230,Tabela FIPE (estimado),Fabricante / INMETRO
+6,Fiat Mobi LX,Fiat,Economico,2020,43300.0,44382.49999999999,13.7,18.1,69,999,4,5,flexivel,manual,preto,12012,Tabela FIPE (estimado),Fabricante / INMETRO
+7,Fiat Mobi GL,Fiat,Economico,2020,44900.0,46022.49999999999,14.2,18.8,72,999,4,5,flexivel,automatico,azul,118858,Tabela FIPE (estimado),Fabricante / INMETRO
+8,Fiat Mobi GT,Fiat,Economico,2018,38700.0,39667.5,12.9,15.5,67,999,4,5,flexivel,cvt,laranja,166455,Tabela FIPE (estimado),Fabricante / INMETRO
+9,Fiat Mobi LTZ,Fiat,Economico,2019,36600.0,37515.0,13.3,17.9,74,999,4,5,flexivel,manual,vermelho,179467,Tabela FIPE (estimado),Fabricante / INMETRO
+10,Fiat Argo GL,Fiat,Economico,2017,67100.0,68777.5,12.3,14.3,108,999,4,5,flexivel,automatico,cinza,55738,Tabela FIPE (estimado),Fabricante / INMETRO
+11,Fiat Argo TDI,Fiat,Economico,2023,68300.0,70007.5,12.8,15.1,80,999,4,5,flexivel,cvt,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+12,Fiat Argo SE,Fiat,Economico,2021,66200.0,67855.0,12.4,15.7,95,999,4,5,flexivel,automatico,vermelho,36262,Tabela FIPE (estimado),Fabricante / INMETRO
+13,Fiat Argo 1.4,Fiat,Economico,2018,66300.0,67957.5,13.2,15.6,82,999,4,5,flexivel,automatico,verde,156345,Tabela FIPE (estimado),Fabricante / INMETRO
+14,Fiat Cronos LX,Fiat,Sedan,2022,84900.0,87022.49999999999,11.6,15.6,98,1332,4,5,flexivel,cvt,preto,0,Tabela FIPE (estimado),Fabricante / INMETRO
+15,Fiat Cronos RS,Fiat,Sedan,2024,70300.0,72057.5,11.8,13.8,104,1332,4,5,flexivel,manual,prata,0,Tabela FIPE (estimado),Fabricante / INMETRO
+16,Fiat Cronos 1.6,Fiat,Sedan,2023,82500.0,84562.49999999999,11.0,13.8,100,1332,4,5,flexivel,cvt,marrom,0,Tabela FIPE (estimado),Fabricante / INMETRO
+17,Fiat Cronos SE,Fiat,Sedan,2020,81800.0,83845.0,11.5,13.7,103,1332,4,5,flexivel,manual,prata,141394,Tabela FIPE (estimado),Fabricante / INMETRO
+18,Fiat Cronos Premium,Fiat,Sedan,2022,71500.0,73287.5,10.5,14.0,110,1332,4,5,flexivel,manual,azul,0,Tabela FIPE (estimado),Fabricante / INMETRO
+19,Fiat Cronos TDI,Fiat,Sedan,2019,82600.0,84664.99999999999,12.4,14.5,105,1332,4,5,flexivel,manual,preto,199387,Tabela FIPE (estimado),Fabricante / INMETRO
+20,Fiat Pulse Sport,Fiat,SUV,2024,93900.0,96247.49999999999,9.8,12.3,123,999,4,5,flexivel,cvt,verde,0,Tabela FIPE (estimado),Fabricante / INMETRO
+21,Fiat Pulse SE,Fiat,SUV,2022,89300.0,91532.49999999999,10.3,13.2,108,999,4,5,flexivel,automatico,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+22,Fiat Pulse Premium,Fiat,SUV,2021,80000.0,82000.0,9.6,11.1,120,999,4,5,flexivel,manual,vermelho,154256,Tabela FIPE (estimado),Fabricante / INMETRO
+23,Fiat Pulse SE,Fiat,SUV,2021,89200.0,91429.99999999999,9.6,11.2,87,999,4,5,flexivel,manual,cinza,18574,Tabela FIPE (estimado),Fabricante / INMETRO
+24,Fiat Fastback S,Fiat,SUV,2024,107100.0,109777.49999999999,10.1,13.1,166,1332,4,5,flexivel,manual,laranja,0,Tabela FIPE (estimado),Fabricante / INMETRO
+25,Fiat Fastback GTS,Fiat,SUV,2023,115200.0,118079.99999999999,9.4,11.0,157,1332,4,5,flexivel,automatico,cinza,0,Tabela FIPE (estimado),Fabricante / INMETRO
+26,Fiat Fastback 1.0,Fiat,SUV,2023,116600.0,119514.99999999999,9.1,11.7,171,1332,4,5,flexivel,automatico,preto,0,Tabela FIPE (estimado),Fabricante / INMETRO
+27,Fiat Fastback RS,Fiat,SUV,2024,103500.0,106087.49999999999,10.7,12.8,142,1332,4,5,flexivel,manual,marrom,0,Tabela FIPE (estimado),Fabricante / INMETRO
+28,Fiat Fastback TDI,Fiat,SUV,2023,99600.0,102089.99999999999,9.9,13.1,134,1332,4,5,flexivel,manual,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+29,Fiat Strada GTS,Fiat,Picape,2021,85000.0,87124.99999999999,11.2,15.1,109,1332,2,5,flexivel,automatico,vermelho,43597,Tabela FIPE (estimado),Fabricante / INMETRO
+30,Fiat Strada LS,Fiat,Picape,2018,61400.0,62934.99999999999,10.3,12.0,97,1332,2,5,flexivel,automatico,branco,102346,Tabela FIPE (estimado),Fabricante / INMETRO
+31,Fiat Strada Sport,Fiat,Picape,2015,67700.0,69392.5,11.4,15.4,102,1332,2,5,flexivel,automatico,bege,40579,Tabela FIPE (estimado),Fabricante / INMETRO
+32,Fiat Toro S,Fiat,SUV,2016,106900.0,109572.49999999999,9.4,12.2,142,1332,4,5,flexivel,cvt,branco,153138,Tabela FIPE (estimado),Fabricante / INMETRO
+33,Fiat Toro DX,Fiat,SUV,2024,83700.0,85792.49999999999,10.4,12.1,150,1332,4,5,flexivel,manual,preto,0,Tabela FIPE (estimado),Fabricante / INMETRO
+34,Fiat Toro GTS,Fiat,SUV,2019,97200.0,99629.99999999999,10.4,13.1,141,1332,4,5,flexivel,cvt,laranja,21491,Tabela FIPE (estimado),Fabricante / INMETRO
+35,Fiat Toro LS,Fiat,SUV,2024,92400.0,94709.99999999999,8.7,11.2,159,1332,4,5,flexivel,automatico,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+36,Fiat Ducato GLX,Fiat,Comercial,2019,147400.0,151085.0,7.9,10.6,120,2287,2,3,diesel,manual,bege,162833,Tabela FIPE (estimado),Fabricante / INMETRO
+37,Fiat Ducato Advantage,Fiat,Comercial,2016,152300.0,156107.5,7.0,8.2,131,2287,2,3,diesel,automatica,preto,64037,Tabela FIPE (estimado),Fabricante / INMETRO
+38,Fiat Ducato LX,Fiat,Comercial,2017,146300.0,149957.5,7.1,8.6,140,2287,2,3,diesel,automatica,marrom,2050,Tabela FIPE (estimado),Fabricante / INMETRO
+39,Fiat Ducato LS,Fiat,Comercial,2016,176300.0,180707.49999999997,6.3,7.4,123,2287,2,3,diesel,automatica,marrom,40749,Tabela FIPE (estimado),Fabricante / INMETRO
+40,Fiat Fiorino 1.4,Fiat,Comercial,2021,60300.0,61807.49999999999,9.9,13.1,85,1242,2,2,flexivel,cvt,azul,13316,Tabela FIPE (estimado),Fabricante / INMETRO
+41,Fiat Fiorino RS,Fiat,Comercial,2016,74900.0,76772.5,8.6,10.5,74,1242,2,2,flexivel,cvt,azul,42357,Tabela FIPE (estimado),Fabricante / INMETRO
+42,Fiat Fiorino Advantage,Fiat,Comercial,2021,62800.0,64369.99999999999,8.5,9.9,74,1242,2,2,flexivel,cvt,marrom,9444,Tabela FIPE (estimado),Fabricante / INMETRO
+43,Fiat Fiorino LX,Fiat,Comercial,2018,54400.0,55759.99999999999,8.8,10.7,71,1242,2,2,flexivel,manual,cinza,55070,Tabela FIPE (estimado),Fabricante / INMETRO
+44,Volkswagen Gol GT,Volkswagen,Economico,2015,46200.0,47354.99999999999,13.7,16.9,72,999,4,5,flexivel,automatico,vermelho,42598,Tabela FIPE (estimado),Fabricante / INMETRO
+45,Volkswagen Gol GT,Volkswagen,Economico,2010,22200.0,22754.999999999996,13.8,18.0,81,999,4,5,flexivel,cvt,vermelho,69941,Tabela FIPE (estimado),Fabricante / INMETRO
+46,Volkswagen Gol LT,Volkswagen,Economico,2011,30300.0,31057.499999999996,11.6,14.4,74,999,4,5,flexivel,manual,bege,91660,Tabela FIPE (estimado),Fabricante / INMETRO
+47,Volkswagen Polo GL,Volkswagen,Economico,2017,76500.0,78412.5,12.0,14.5,88,999,4,5,flexivel,cvt,azul,92050,Tabela FIPE (estimado),Fabricante / INMETRO
+48,Volkswagen Polo LS,Volkswagen,Economico,2023,77000.0,78925.0,13.1,15.9,85,999,4,5,flexivel,manual,preto,0,Tabela FIPE (estimado),Fabricante / INMETRO
+49,Volkswagen Polo SE,Volkswagen,Economico,2021,61000.0,62524.99999999999,12.5,15.2,104,999,4,5,flexivel,manual,verde,158914,Tabela FIPE (estimado),Fabricante / INMETRO
+50,Volkswagen Polo SE,Volkswagen,Economico,2023,82500.0,84562.49999999999,11.5,13.3,111,999,4,5,flexivel,cvt,branco,0,Tabela FIPE (estimado),Fabricante / INMETRO
+51,Volkswagen Virtus LT,Volkswagen,Sedan,2020,83600.0,85689.99999999999,13.4,17.9,136,999,4,5,flexivel,cvt,preto,188679,Tabela FIPE (estimado),Fabricante / INMETRO
+52,Volkswagen Virtus LX,Volkswagen,Sedan,2020,88300.0,90507.49999999999,11.8,15.2,124,999,4,5,flexivel,automatico,vermelho,110217,Tabela FIPE (estimado),Fabricante / INMETRO
+53,Volkswagen Virtus,Volkswagen,Sedan,2023,90000.0,92249.99999999999,11.4,14.4,141,999,4,5,flexivel,automatico,marrom,0,Tabela FIPE (estimado),Fabricante / INMETRO
+54,Volkswagen Virtus RS,Volkswagen,Sedan,2020,79200.0,81180.0,13.0,16.5,136,999,4,5,flexivel,cvt,bege,115811,Tabela FIPE (estimado),Fabricante / INMETRO
+55,Volkswagen T-Cross LT,Volkswagen,SUV,2023,99200.0,101679.99999999999,11.8,15.4,126,999,4,5,flexivel,cvt,preto,0,Tabela FIPE (estimado),Fabricante / INMETRO
+56,Volkswagen T-Cross Premium,Volkswagen,SUV,2024,104000.0,106599.99999999999,10.3,13.5,131,999,4,5,flexivel,manual,azul,0,Tabela FIPE (estimado),Fabricante / INMETRO
+57,Volkswagen T-Cross GL,Volkswagen,SUV,2020,85700.0,87842.49999999999,10.1,12.6,120,999,4,5,flexivel,cvt,bege,108643,Tabela FIPE (estimado),Fabricante / INMETRO
+58,Volkswagen T-Cross 1.6,Volkswagen,SUV,2020,106600.0,109264.99999999999,10.5,12.9,125,999,4,5,flexivel,automatico,branco,196860,Tabela FIPE (estimado),Fabricante / INMETRO
+59,Volkswagen Nivus RS,Volkswagen,SUV,2021,105100.0,107727.49999999999,11.2,13.9,124,999,4,5,flexivel,manual,vermelho,31813,Tabela FIPE (estimado),Fabricante / INMETRO
+60,Volkswagen Nivus DX,Volkswagen,SUV,2023,101700.0,104242.49999999999,12.0,15.2,128,999,4,5,flexivel,cvt,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+61,Volkswagen Nivus RS,Volkswagen,SUV,2024,95700.0,98092.49999999999,11.8,14.6,118,999,4,5,flexivel,automatico,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+62,Volkswagen Nivus RS,Volkswagen,SUV,2021,106000.0,108649.99999999999,10.2,13.3,123,999,4,5,flexivel,manual,vermelho,71984,Tabela FIPE (estimado),Fabricante / INMETRO
+63,Volkswagen Taos Premium,Volkswagen,SUV,2022,130900.0,134172.5,9.3,11.7,158,1395,4,5,flexivel,automatico,prata,0,Tabela FIPE (estimado),Fabricante / INMETRO
+64,Volkswagen Taos GTS,Volkswagen,SUV,2022,148300.0,152007.5,8.7,10.7,184,1395,4,5,flexivel,manual,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+65,Volkswagen Taos SPORT,Volkswagen,SUV,2022,153300.0,157132.5,9.5,12.4,151,1395,4,5,flexivel,automatico,laranja,0,Tabela FIPE (estimado),Fabricante / INMETRO
+66,Volkswagen Taos TDI,Volkswagen,SUV,2021,157700.0,161642.5,9.2,11.3,176,1395,4,5,flexivel,cvt,marrom,195956,Tabela FIPE (estimado),Fabricante / INMETRO
+67,Volkswagen Taos LX,Volkswagen,SUV,2022,139500.0,142987.5,9.2,11.5,174,1395,4,5,flexivel,cvt,cinza,0,Tabela FIPE (estimado),Fabricante / INMETRO
+68,Volkswagen Saveiro SPORT,Volkswagen,Picape,2021,55800.0,57194.99999999999,10.2,12.0,109,1598,2,5,flexivel,cvt,marrom,7069,Tabela FIPE (estimado),Fabricante / INMETRO
+69,Volkswagen Saveiro LS,Volkswagen,Picape,2019,73200.0,75030.0,9.2,11.4,104,1598,2,5,flexivel,automatico,prata,13181,Tabela FIPE (estimado),Fabricante / INMETRO
+70,Volkswagen Saveiro GTS,Volkswagen,Picape,2015,57400.0,58834.99999999999,9.8,12.8,102,1598,2,5,flexivel,automatico,azul,197134,Tabela FIPE (estimado),Fabricante / INMETRO
+71,Volkswagen Saveiro GL,Volkswagen,Picape,2023,52900.0,54222.49999999999,9.0,11.3,101,1598,2,5,flexivel,manual,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+72,Volkswagen Saveiro,Volkswagen,Picape,2022,83500.0,85587.49999999999,9.1,10.5,97,1598,2,5,flexivel,cvt,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+73,Volkswagen Saveiro LS,Volkswagen,Picape,2012,58300.0,59757.49999999999,10.2,12.0,96,1598,2,5,flexivel,automatico,bege,183360,Tabela FIPE (estimado),Fabricante / INMETRO
+74,Volkswagen Amarok 1.6,Volkswagen,Picape,2021,180700.0,185217.49999999997,8.4,9.9,192,1968,4,5,diesel,manual,prata,81536,Tabela FIPE (estimado),Fabricante / INMETRO
+75,Volkswagen Amarok GLX,Volkswagen,Picape,2016,177600.0,182039.99999999997,8.8,10.8,200,1968,4,5,diesel,manual,vermelho,19922,Tabela FIPE (estimado),Fabricante / INMETRO
+76,Volkswagen Amarok 1.0,Volkswagen,Picape,2013,189700.0,194442.49999999997,7.3,9.4,191,1968,4,5,diesel,automatica,preto,148355,Tabela FIPE (estimado),Fabricante / INMETRO
+77,Volkswagen Amarok S,Volkswagen,Picape,2020,162800.0,166870.0,7.4,9.3,161,1968,4,5,diesel,manual,branco,110115,Tabela FIPE (estimado),Fabricante / INMETRO
+78,Volkswagen Fox SE,Volkswagen,Economico,2015,30900.0,31672.499999999996,13.6,17.6,74,999,4,5,flexivel,cvt,prata,192360,Tabela FIPE (estimado),Fabricante / INMETRO
+79,Volkswagen Fox GLX,Volkswagen,Economico,2014,30400.0,31159.999999999996,13.8,18.0,75,999,4,5,flexivel,automatico,verde,191634,Tabela FIPE (estimado),Fabricante / INMETRO
+80,Volkswagen Fox RS,Volkswagen,Economico,2015,36300.0,37207.5,13.6,15.9,75,999,4,5,flexivel,cvt,vermelho,196732,Tabela FIPE (estimado),Fabricante / INMETRO
+81,Volkswagen Fox Sport,Volkswagen,Economico,2019,31700.0,32492.499999999996,12.3,15.4,73,999,4,5,flexivel,automatico,prata,127808,Tabela FIPE (estimado),Fabricante / INMETRO
+82,Volkswagen Fox SE,Volkswagen,Economico,2014,23500.0,24087.499999999996,13.7,17.7,72,999,4,5,flexivel,manual,marrom,2661,Tabela FIPE (estimado),Fabricante / INMETRO
+83,Volkswagen Fox S,Volkswagen,Economico,2011,21000.0,21524.999999999996,12.5,15.8,71,999,4,5,flexivel,automatico,bege,169319,Tabela FIPE (estimado),Fabricante / INMETRO
+84,Volkswagen up! SE,Volkswagen,Economico,2015,33800.0,34645.0,13.0,15.6,80,999,4,5,flexivel,automatico,bege,145089,Tabela FIPE (estimado),Fabricante / INMETRO
+85,Volkswagen up! LS,Volkswagen,Economico,2020,54900.0,56272.49999999999,13.4,16.4,82,999,4,5,flexivel,manual,azul,80379,Tabela FIPE (estimado),Fabricante / INMETRO
+86,Volkswagen up! S,Volkswagen,Economico,2015,46600.0,47764.99999999999,12.8,16.6,77,999,4,5,flexivel,automatico,vermelho,56723,Tabela FIPE (estimado),Fabricante / INMETRO
+87,Chevrolet Onix TDI,Chevrolet,Economico,2013,54100.0,55452.49999999999,12.2,14.9,82,999,4,5,flexivel,manual,branco,185602,Tabela FIPE (estimado),Fabricante / INMETRO
+88,Chevrolet Onix,Chevrolet,Economico,2016,26600.0,27264.999999999996,11.6,14.0,80,999,4,5,flexivel,cvt,bege,26892,Tabela FIPE (estimado),Fabricante / INMETRO
+89,Chevrolet Onix 1.6,Chevrolet,Economico,2016,41400.0,42434.99999999999,12.6,15.0,78,999,4,5,flexivel,manual,azul,125233,Tabela FIPE (estimado),Fabricante / INMETRO
+90,Chevrolet Onix LT,Chevrolet,Economico,2018,42200.0,43254.99999999999,12.9,16.6,80,999,4,5,flexivel,manual,prata,147545,Tabela FIPE (estimado),Fabricante / INMETRO
+91,Chevrolet Onix RS,Chevrolet,Economico,2015,29100.0,29827.499999999996,13.4,17.0,81,999,4,5,flexivel,automatico,marrom,99713,Tabela FIPE (estimado),Fabricante / INMETRO
+92,Chevrolet Onix Plus GL,Chevrolet,Sedan,2023,79800.0,81795.0,11.8,15.0,88,999,4,5,flexivel,manual,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+93,Chevrolet Onix Plus GTS,Chevrolet,Sedan,2021,73200.0,75030.0,11.4,13.5,86,999,4,5,flexivel,automatico,prata,701,Tabela FIPE (estimado),Fabricante / INMETRO
+94,Chevrolet Onix Plus 1.4,Chevrolet,Sedan,2024,71900.0,73697.5,11.7,14.0,100,999,4,5,flexivel,cvt,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+95,Chevrolet Onix Plus TDI,Chevrolet,Sedan,2020,78500.0,80462.5,13.0,16.6,94,999,4,5,flexivel,manual,verde,30087,Tabela FIPE (estimado),Fabricante / INMETRO
+96,Chevrolet Onix Plus LT,Chevrolet,Sedan,2024,63000.0,64574.99999999999,11.7,13.8,85,999,4,5,flexivel,cvt,prata,0,Tabela FIPE (estimado),Fabricante / INMETRO
+97,Chevrolet Cruze TDI,Chevrolet,Sedan,2023,70600.0,72365.0,12.1,15.6,152,1399,4,5,flexivel,automatico,marrom,0,Tabela FIPE (estimado),Fabricante / INMETRO
+98,Chevrolet Cruze LS,Chevrolet,Sedan,2023,68600.0,70315.0,10.1,12.5,154,1399,4,5,flexivel,manual,laranja,0,Tabela FIPE (estimado),Fabricante / INMETRO
+99,Chevrolet Cruze LS,Chevrolet,Sedan,2017,75300.0,77182.5,12.0,15.9,162,1399,4,5,flexivel,cvt,branco,176234,Tabela FIPE (estimado),Fabricante / INMETRO
+100,Chevrolet Cruze GLX,Chevrolet,Sedan,2016,99300.0,101782.49999999999,10.5,13.2,158,1399,4,5,flexivel,automatico,azul,47576,Tabela FIPE (estimado),Fabricante / INMETRO
+101,Chevrolet Cruze GT,Chevrolet,Sedan,2023,108600.0,111314.99999999999,11.4,14.0,154,1399,4,5,flexivel,automatico,preto,0,Tabela FIPE (estimado),Fabricante / INMETRO
+102,Chevrolet Tracker 1.0,Chevrolet,SUV,2024,94900.0,97272.49999999999,11.2,13.8,164,999,4,5,flexivel,automatico,marrom,0,Tabela FIPE (estimado),Fabricante / INMETRO
+103,Chevrolet Tracker LX,Chevrolet,SUV,2019,89400.0,91634.99999999999,10.3,13.8,141,999,4,5,flexivel,cvt,marrom,301,Tabela FIPE (estimado),Fabricante / INMETRO
+104,Chevrolet Tracker GL,Chevrolet,SUV,2022,92400.0,94709.99999999999,10.0,12.2,164,999,4,5,flexivel,automatico,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+105,Chevrolet Tracker,Chevrolet,SUV,2019,86100.0,88252.49999999999,10.9,14.6,144,999,4,5,flexivel,cvt,bege,31831,Tabela FIPE (estimado),Fabricante / INMETRO
+106,Chevrolet Tracker GTS,Chevrolet,SUV,2023,104000.0,106599.99999999999,11.3,13.7,116,999,4,5,flexivel,manual,marrom,0,Tabela FIPE (estimado),Fabricante / INMETRO
+107,Chevrolet Tracker LT,Chevrolet,SUV,2020,109800.0,112544.99999999999,11.8,14.7,123,999,4,5,flexivel,cvt,prata,130646,Tabela FIPE (estimado),Fabricante / INMETRO
+108,Chevrolet S10 Sport,Chevrolet,Picape,2018,203500.0,208587.49999999997,9.0,10.8,182,2776,4,5,diesel,manual,prata,100554,Tabela FIPE (estimado),Fabricante / INMETRO
+109,Chevrolet S10,Chevrolet,Picape,2013,147600.0,151290.0,8.5,10.5,197,2776,4,5,diesel,automatica,marrom,70037,Tabela FIPE (estimado),Fabricante / INMETRO
+110,Chevrolet S10 RS,Chevrolet,Picape,2023,149900.0,153647.5,8.0,10.8,178,2776,4,5,diesel,automatica,prata,0,Tabela FIPE (estimado),Fabricante / INMETRO
+111,Chevrolet S10 Premium,Chevrolet,Picape,2017,153200.0,157030.0,8.4,10.3,167,2776,4,5,diesel,automatica,vermelho,182845,Tabela FIPE (estimado),Fabricante / INMETRO
+112,Chevrolet S10 LX,Chevrolet,Picape,2015,205600.0,210739.99999999997,7.5,9.1,177,2776,4,5,diesel,manual,verde,101208,Tabela FIPE (estimado),Fabricante / INMETRO
+113,Chevrolet Montana SE,Chevrolet,Picape,2010,60000.0,61499.99999999999,11.4,13.9,104,1221,4,5,flexivel,automatico,bege,26138,Tabela FIPE (estimado),Fabricante / INMETRO
+114,Chevrolet Montana LS,Chevrolet,Picape,2010,83900.0,85997.49999999999,10.3,13.2,105,1221,4,5,flexivel,automatico,preto,123074,Tabela FIPE (estimado),Fabricante / INMETRO
+115,Chevrolet Montana GL,Chevrolet,Picape,2019,82700.0,84767.49999999999,10.8,14.3,118,1221,4,5,flexivel,cvt,verde,83010,Tabela FIPE (estimado),Fabricante / INMETRO
+116,Chevrolet Montana GL,Chevrolet,Picape,2024,85400.0,87534.99999999999,11.2,13.0,103,1221,4,5,flexivel,cvt,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+117,Chevrolet Montana RS,Chevrolet,Picape,2024,66500.0,68162.5,10.0,11.7,104,1221,4,5,flexivel,manual,preto,0,Tabela FIPE (estimado),Fabricante / INMETRO
+118,Chevrolet Montana Advantage,Chevrolet,Picape,2021,67000.0,68675.0,9.6,11.7,102,1221,4,5,flexivel,automatico,azul,93969,Tabela FIPE (estimado),Fabricante / INMETRO
+119,Chevrolet Spin DX,Chevrolet,SUV,2015,70900.0,72672.5,9.4,12.3,108,1796,4,7,flexivel,automatico,prata,20701,Tabela FIPE (estimado),Fabricante / INMETRO
+120,Chevrolet Spin LS,Chevrolet,SUV,2021,75500.0,77387.5,9.2,11.7,109,1796,4,7,flexivel,automatico,bege,167222,Tabela FIPE (estimado),Fabricante / INMETRO
+121,Chevrolet Spin 1.4,Chevrolet,SUV,2016,75000.0,76875.0,10.2,12.7,110,1796,4,7,flexivel,automatico,marrom,41412,Tabela FIPE (estimado),Fabricante / INMETRO
+122,Chevrolet Spin LT,Chevrolet,SUV,2017,84600.0,86714.99999999999,8.7,11.7,117,1796,4,7,flexivel,manual,azul,119756,Tabela FIPE (estimado),Fabricante / INMETRO
+123,Chevrolet Bolt EUV,Chevrolet,Eletrico,2023,153200.0,157030.0,51.9,63.4,204,0,4,5,eletrico,automatico,azul,0,Fabricante,Fabricante / INMETRO
+124,Chevrolet Bolt EUV S,Chevrolet,Eletrico,2024,161900.0,165947.5,50.0,66.2,200,0,4,5,eletrico,automatico,laranja,0,Fabricante,Fabricante / INMETRO
+125,Chevrolet Bolt EUV DX,Chevrolet,Eletrico,2023,173300.0,177632.49999999997,51.2,67.1,203,0,4,5,eletrico,automatico,vermelho,0,Fabricante,Fabricante / INMETRO
+126,Chevrolet Bolt EUV GL,Chevrolet,Eletrico,2023,170300.0,174557.49999999997,53.6,68.7,202,0,4,5,eletrico,automatico,preto,0,Fabricante,Fabricante / INMETRO
+127,Chevrolet Bolt EUV 1.4,Chevrolet,Eletrico,2024,151200.0,154980.0,53.9,62.3,205,0,4,5,eletrico,automatico,prata,0,Fabricante,Fabricante / INMETRO
+128,Chevrolet Bolt EUV SE,Chevrolet,Eletrico,2023,159800.0,163795.0,52.1,62.0,208,0,4,5,eletrico,automatico,cinza,0,Fabricante,Fabricante / INMETRO
+129,Chevrolet Celta RS,Chevrolet,Economico,2016,12500.0,12812.499999999998,14.3,19.1,64,999,4,5,flexivel,manual,cinza,30191,Tabela FIPE (estimado),Fabricante / INMETRO
+130,Chevrolet Celta Advantage,Chevrolet,Economico,2011,21300.0,21832.499999999996,12.6,16.2,70,999,4,5,flexivel,manual,verde,146096,Tabela FIPE (estimado),Fabricante / INMETRO
+131,Chevrolet Celta SPORT,Chevrolet,Economico,2016,15900.0,16297.499999999998,12.7,14.9,65,999,4,5,flexivel,cvt,azul,153238,Tabela FIPE (estimado),Fabricante / INMETRO
+132,Chevrolet Celta Premium,Chevrolet,Economico,2012,11600.0,11889.999999999998,12.6,14.6,68,999,4,5,flexivel,cvt,cinza,159929,Tabela FIPE (estimado),Fabricante / INMETRO
+133,Chevrolet Celta 2.0,Chevrolet,Economico,2010,19500.0,19987.5,13.2,17.0,70,999,4,5,flexivel,manual,verde,30585,Tabela FIPE (estimado),Fabricante / INMETRO
+134,Chevrolet Prisma RS,Chevrolet,Sedan,2014,44900.0,46022.49999999999,10.8,12.9,106,1389,4,5,flexivel,automatico,prata,101881,Tabela FIPE (estimado),Fabricante / INMETRO
+135,Chevrolet Prisma GL,Chevrolet,Sedan,2020,43500.0,44587.49999999999,12.2,15.3,107,1389,4,5,flexivel,manual,prata,108759,Tabela FIPE (estimado),Fabricante / INMETRO
+136,Chevrolet Prisma RS,Chevrolet,Sedan,2017,33500.0,34337.5,12.8,15.4,103,1389,4,5,flexivel,manual,vermelho,116230,Tabela FIPE (estimado),Fabricante / INMETRO
+137,Toyota Corolla LS,Toyota,Sedan,2011,128400.0,131610.0,10.6,14.1,162,1987,4,5,flexivel,manual,branco,104369,Tabela FIPE (estimado),Fabricante / INMETRO
+138,Toyota Corolla 1.0,Toyota,Sedan,2011,125700.0,128842.49999999999,12.0,14.0,153,1987,4,5,flexivel,automatico,laranja,5598,Tabela FIPE (estimado),Fabricante / INMETRO
+139,Toyota Corolla Sport,Toyota,Sedan,2013,129000.0,132225.0,11.9,14.2,175,1987,4,5,flexivel,manual,vermelho,153716,Tabela FIPE (estimado),Fabricante / INMETRO
+140,Toyota Corolla TDI,Toyota,Sedan,2015,110800.0,113569.99999999999,11.9,15.1,157,1987,4,5,flexivel,automatico,prata,34076,Tabela FIPE (estimado),Fabricante / INMETRO
+141,Toyota Corolla Premium,Toyota,Sedan,2022,59800.0,61294.99999999999,11.5,13.3,140,1987,4,5,flexivel,cvt,cinza,0,Tabela FIPE (estimado),Fabricante / INMETRO
+142,Toyota Yaris 1.4,Toyota,Economico,2018,68500.0,70212.5,11.1,14.4,109,1496,4,5,flexivel,automatico,preto,195471,Tabela FIPE (estimado),Fabricante / INMETRO
+143,Toyota Yaris 1.0,Toyota,Economico,2021,80600.0,82615.0,12.3,14.4,109,1496,4,5,flexivel,cvt,vermelho,161246,Tabela FIPE (estimado),Fabricante / INMETRO
+144,Toyota Yaris S,Toyota,Economico,2024,83200.0,85279.99999999999,12.6,15.3,101,1496,4,5,flexivel,automatico,branco,0,Tabela FIPE (estimado),Fabricante / INMETRO
+145,Toyota Yaris DX,Toyota,Economico,2021,78700.0,80667.5,12.2,16.2,102,1496,4,5,flexivel,manual,preto,84439,Tabela FIPE (estimado),Fabricante / INMETRO
+146,Toyota Yaris SE,Toyota,Economico,2018,67500.0,69187.5,12.6,16.0,106,1496,4,5,flexivel,automatico,verde,156602,Tabela FIPE (estimado),Fabricante / INMETRO
+147,Toyota Corolla Cross GTS,Toyota,SUV,2024,124000.0,127099.99999999999,11.6,15.3,171,1798,4,5,flexivel,automatico,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+148,Toyota Corolla Cross GTS,Toyota,SUV,2022,136600.0,140015.0,12.0,14.8,113,1798,4,5,flexivel,automatico,cinza,0,Tabela FIPE (estimado),Fabricante / INMETRO
+149,Toyota Corolla Cross 1.4,Toyota,SUV,2023,135000.0,138375.0,10.0,13.3,109,1798,4,5,flexivel,manual,preto,0,Tabela FIPE (estimado),Fabricante / INMETRO
+150,Toyota Corolla Cross GLX,Toyota,SUV,2024,123900.0,126997.49999999999,11.7,15.4,172,1798,4,5,flexivel,cvt,branco,0,Tabela FIPE (estimado),Fabricante / INMETRO
+151,Toyota Corolla Cross LT,Toyota,SUV,2023,146800.0,150470.0,10.7,14.2,155,1798,4,5,flexivel,cvt,branco,0,Tabela FIPE (estimado),Fabricante / INMETRO
+152,Toyota Corolla Cross 1.6,Toyota,SUV,2023,134100.0,137452.5,11.2,13.4,162,1798,4,5,flexivel,automatico,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+153,Toyota Hilux DX,Toyota,Picape,2011,219100.0,224577.49999999997,7.9,10.4,201,2755,4,5,diesel,manual,marrom,162981,Tabela FIPE (estimado),Fabricante / INMETRO
+154,Toyota Hilux LT,Toyota,Picape,2019,240800.0,246819.99999999997,8.6,10.4,158,2755,4,5,diesel,automatica,azul,184208,Tabela FIPE (estimado),Fabricante / INMETRO
+155,Toyota Hilux GL,Toyota,Picape,2015,120800.0,123819.99999999999,8.7,11.0,172,2755,4,5,diesel,manual,preto,37191,Tabela FIPE (estimado),Fabricante / INMETRO
+156,Toyota Hilux LT,Toyota,Picape,2011,217000.0,222424.99999999997,7.0,8.6,168,2755,4,5,diesel,automatica,prata,97007,Tabela FIPE (estimado),Fabricante / INMETRO
+157,Toyota Hilux DX,Toyota,Picape,2022,242400.0,248459.99999999997,8.0,10.6,156,2755,4,5,diesel,manual,prata,0,Tabela FIPE (estimado),Fabricante / INMETRO
+158,Toyota SW4 SE,Toyota,SUV,2019,233200.0,239029.99999999997,7.1,9.0,190,2694,4,7,flexivel,manual,azul,56510,Tabela FIPE (estimado),Fabricante / INMETRO
+159,Toyota SW4 LT,Toyota,SUV,2020,231600.0,237389.99999999997,6.7,8.6,195,2694,4,7,flexivel,manual,marrom,174884,Tabela FIPE (estimado),Fabricante / INMETRO
+160,Toyota SW4 LS,Toyota,SUV,2018,227400.0,233084.99999999997,7.5,8.6,183,2694,4,7,flexivel,automatico,vermelho,35975,Tabela FIPE (estimado),Fabricante / INMETRO
+161,Toyota Etios Premium,Toyota,Economico,2013,30200.0,30954.999999999996,13.4,15.9,94,1496,4,5,flexivel,cvt,marrom,184463,Tabela FIPE (estimado),Fabricante / INMETRO
+162,Toyota Etios RS,Toyota,Economico,2020,50800.0,52069.99999999999,13.5,15.7,88,1496,4,5,flexivel,manual,verde,4912,Tabela FIPE (estimado),Fabricante / INMETRO
+163,Toyota Etios SPORT,Toyota,Economico,2017,44400.0,45509.99999999999,12.9,16.7,94,1496,4,5,flexivel,manual,azul,30192,Tabela FIPE (estimado),Fabricante / INMETRO
+164,Toyota Etios 1.6,Toyota,Economico,2017,34300.0,35157.5,13.9,17.3,93,1496,4,5,flexivel,manual,preto,114481,Tabela FIPE (estimado),Fabricante / INMETRO
+165,Toyota Etios LTZ,Toyota,Economico,2018,44700.0,45817.49999999999,12.8,15.7,92,1496,4,5,flexivel,manual,cinza,58083,Tabela FIPE (estimado),Fabricante / INMETRO
+166,Honda Civic GL,Honda,Sedan,2018,98800.0,101269.99999999999,11.1,13.2,162,1996,4,5,flexivel,manual,cinza,190678,Tabela FIPE (estimado),Fabricante / INMETRO
+167,Honda Civic GL,Honda,Sedan,2013,53700.0,55042.49999999999,10.3,12.2,149,1996,4,5,flexivel,automatico,preto,46437,Tabela FIPE (estimado),Fabricante / INMETRO
+168,Honda Civic GL,Honda,Sedan,2017,109100.0,111827.49999999999,11.8,14.6,176,1996,4,5,flexivel,automatico,laranja,84727,Tabela FIPE (estimado),Fabricante / INMETRO
+169,Honda HR-V 1.0,Honda,SUV,2022,74100.0,75952.5,10.3,12.5,133,1496,4,5,flexivel,automatico,laranja,0,Tabela FIPE (estimado),Fabricante / INMETRO
+170,Honda HR-V 1.4,Honda,SUV,2023,74500.0,76362.5,10.4,12.0,139,1496,4,5,flexivel,cvt,azul,0,Tabela FIPE (estimado),Fabricante / INMETRO
+171,Honda HR-V GLX,Honda,SUV,2016,106900.0,109572.49999999999,10.5,13.0,151,1496,4,5,flexivel,cvt,branco,117894,Tabela FIPE (estimado),Fabricante / INMETRO
+172,Honda HR-V LTZ,Honda,SUV,2018,89300.0,91532.49999999999,10.4,12.3,119,1496,4,5,flexivel,cvt,bege,27132,Tabela FIPE (estimado),Fabricante / INMETRO
+173,Honda Fit DX,Honda,Economico,2018,63800.0,65394.99999999999,10.6,13.7,129,1496,4,5,flexivel,manual,marrom,137035,Tabela FIPE (estimado),Fabricante / INMETRO
+174,Honda Fit GL,Honda,Economico,2015,47400.0,48584.99999999999,11.3,13.9,125,1496,4,5,flexivel,cvt,laranja,13727,Tabela FIPE (estimado),Fabricante / INMETRO
+175,Honda Fit LX,Honda,Economico,2015,29000.0,29724.999999999996,10.8,13.9,124,1496,4,5,flexivel,cvt,azul,189722,Tabela FIPE (estimado),Fabricante / INMETRO
+176,Honda City DX,Honda,Sedan,2021,77000.0,78925.0,12.5,16.7,128,1496,4,5,flexivel,cvt,verde,33803,Tabela FIPE (estimado),Fabricante / INMETRO
+177,Honda City GL,Honda,Sedan,2019,82700.0,84767.49999999999,11.6,15.2,127,1496,4,5,flexivel,cvt,marrom,24498,Tabela FIPE (estimado),Fabricante / INMETRO
+178,Honda City S,Honda,Sedan,2022,87700.0,89892.49999999999,10.6,12.8,127,1496,4,5,flexivel,manual,cinza,0,Tabela FIPE (estimado),Fabricante / INMETRO
+179,Honda City SE,Honda,Sedan,2020,100000.0,102499.99999999999,11.0,13.3,126,1496,4,5,flexivel,manual,marrom,141497,Tabela FIPE (estimado),Fabricante / INMETRO
+180,Honda CR-V DX,Honda,SUV,2024,152000.0,155800.0,7.9,9.7,160,1996,4,5,flexivel,manual,prata,0,Tabela FIPE (estimado),Fabricante / INMETRO
+181,Honda CR-V LT,Honda,SUV,2021,112500.0,115312.49999999999,8.7,11.2,165,1996,4,5,flexivel,cvt,bege,160063,Tabela FIPE (estimado),Fabricante / INMETRO
+182,Honda CR-V Advantage,Honda,SUV,2022,113900.0,116747.49999999999,9.1,11.0,180,1996,4,5,flexivel,cvt,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+183,Honda CR-V GTS,Honda,SUV,2019,178100.0,182552.49999999997,8.9,10.7,174,1996,4,5,flexivel,manual,marrom,138270,Tabela FIPE (estimado),Fabricante / INMETRO
+184,Honda CR-V Advantage,Honda,SUV,2023,84000.0,86099.99999999999,9.3,12.3,153,1996,4,5,flexivel,cvt,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+185,Hyundai HB20 RS,Hyundai,Economico,2023,54600.0,55964.99999999999,13.6,16.4,85,999,4,5,flexivel,cvt,azul,0,Tabela FIPE (estimado),Fabricante / INMETRO
+186,Hyundai HB20 GTS,Hyundai,Economico,2014,54100.0,55452.49999999999,11.7,15.6,94,999,4,5,flexivel,manual,cinza,6991,Tabela FIPE (estimado),Fabricante / INMETRO
+187,Hyundai HB20 LTZ,Hyundai,Economico,2018,42600.0,43664.99999999999,12.1,16.3,91,999,4,5,flexivel,manual,vermelho,7389,Tabela FIPE (estimado),Fabricante / INMETRO
+188,Hyundai HB20S DX,Hyundai,Sedan,2015,39800.0,40795.0,11.7,15.4,84,999,4,5,flexivel,manual,bege,117598,Tabela FIPE (estimado),Fabricante / INMETRO
+189,Hyundai HB20S LT,Hyundai,Sedan,2014,35700.0,36592.5,11.5,13.6,96,999,4,5,flexivel,manual,verde,29146,Tabela FIPE (estimado),Fabricante / INMETRO
+190,Hyundai HB20S S,Hyundai,Sedan,2017,39300.0,40282.5,11.6,14.8,94,999,4,5,flexivel,cvt,preto,29060,Tabela FIPE (estimado),Fabricante / INMETRO
+191,Hyundai HB20S,Hyundai,Sedan,2021,35600.0,36490.0,12.3,14.7,84,999,4,5,flexivel,cvt,azul,112522,Tabela FIPE (estimado),Fabricante / INMETRO
+192,Hyundai HB20S 1.4,Hyundai,Sedan,2018,43400.0,44484.99999999999,12.0,15.4,82,999,4,5,flexivel,cvt,marrom,94530,Tabela FIPE (estimado),Fabricante / INMETRO
+193,Hyundai Creta,Hyundai,SUV,2023,114900.0,117772.49999999999,9.6,11.8,143,998,4,5,flexivel,automatico,azul,0,Tabela FIPE (estimado),Fabricante / INMETRO
+194,Hyundai Creta LTZ,Hyundai,SUV,2018,93800.0,96144.99999999999,11.3,14.4,169,998,4,5,flexivel,manual,laranja,192724,Tabela FIPE (estimado),Fabricante / INMETRO
+195,Hyundai Creta S,Hyundai,SUV,2017,94100.0,96452.49999999999,10.3,13.2,173,998,4,5,flexivel,cvt,bege,182292,Tabela FIPE (estimado),Fabricante / INMETRO
+196,Hyundai Tucson Sport,Hyundai,SUV,2017,74400.0,76260.0,10.3,12.8,159,1999,4,5,flexivel,manual,vermelho,11483,Tabela FIPE (estimado),Fabricante / INMETRO
+197,Hyundai Tucson 1.0,Hyundai,SUV,2020,135300.0,138682.5,9.5,12.8,167,1999,4,5,flexivel,cvt,bege,66404,Tabela FIPE (estimado),Fabricante / INMETRO
+198,Hyundai Tucson 1.6,Hyundai,SUV,2018,90000.0,92249.99999999999,10.6,12.3,170,1999,4,5,flexivel,automatico,cinza,71622,Tabela FIPE (estimado),Fabricante / INMETRO
+199,Hyundai Tucson S,Hyundai,SUV,2021,132300.0,135607.5,10.2,13.6,162,1999,4,5,flexivel,cvt,cinza,48973,Tabela FIPE (estimado),Fabricante / INMETRO
+200,Hyundai Santa Fe DX,Hyundai,SUV,2015,170900.0,175172.49999999997,8.6,11.3,224,2359,4,7,flexivel,manual,preto,112881,Tabela FIPE (estimado),Fabricante / INMETRO
+201,Hyundai Santa Fe DX,Hyundai,SUV,2018,95300.0,97682.49999999999,7.3,8.9,207,2359,4,7,flexivel,cvt,azul,116894,Tabela FIPE (estimado),Fabricante / INMETRO
+202,Hyundai Santa Fe LS,Hyundai,SUV,2016,80000.0,82000.0,8.3,10.3,215,2359,4,7,flexivel,cvt,laranja,114017,Tabela FIPE (estimado),Fabricante / INMETRO
+203,Hyundai Santa Fe LX,Hyundai,SUV,2022,173700.0,178042.49999999997,7.2,9.2,216,2359,4,7,flexivel,manual,marrom,0,Tabela FIPE (estimado),Fabricante / INMETRO
+204,Hyundai Santa Fe Premium,Hyundai,SUV,2010,77100.0,79027.5,8.8,11.5,174,2359,4,7,flexivel,cvt,prata,17624,Tabela FIPE (estimado),Fabricante / INMETRO
+205,Hyundai Santa Fe Advantage,Hyundai,SUV,2015,103500.0,106087.49999999999,9.8,11.3,189,2359,4,7,flexivel,automatico,bege,97246,Tabela FIPE (estimado),Fabricante / INMETRO
+206,Renault Kwid GT,Renault,Economico,2019,42900.0,43972.49999999999,13.8,17.7,67,999,4,5,flexivel,automatico,preto,6793,Tabela FIPE (estimado),Fabricante / INMETRO
+207,Renault Kwid DX,Renault,Economico,2023,48700.0,49917.49999999999,13.2,17.2,69,999,4,5,flexivel,automatico,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+208,Renault Kwid 1.4,Renault,Economico,2024,38000.0,38950.0,13.3,15.5,67,999,4,5,flexivel,cvt,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+209,Renault Sandero GL,Renault,Economico,2020,27200.0,27879.999999999996,11.7,14.7,75,999,4,5,flexivel,manual,prata,186596,Tabela FIPE (estimado),Fabricante / INMETRO
+210,Renault Sandero S,Renault,Economico,2022,27700.0,28392.499999999996,12.1,16.3,70,999,4,5,flexivel,manual,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+211,Renault Sandero 1.4,Renault,Economico,2015,34400.0,35260.0,12.4,16.3,83,999,4,5,flexivel,manual,prata,160418,Tabela FIPE (estimado),Fabricante / INMETRO
+212,Renault Sandero 1.4,Renault,Economico,2014,28900.0,29622.499999999996,13.3,16.6,79,999,4,5,flexivel,manual,verde,150706,Tabela FIPE (estimado),Fabricante / INMETRO
+213,Renault Sandero GL,Renault,Economico,2015,37500.0,38437.5,12.6,16.2,77,999,4,5,flexivel,cvt,prata,144520,Tabela FIPE (estimado),Fabricante / INMETRO
+214,Renault Duster SE,Renault,SUV,2024,93500.0,95837.49999999999,9.3,12.4,103,1598,4,5,flexivel,manual,preto,0,Tabela FIPE (estimado),Fabricante / INMETRO
+215,Renault Duster 1.4,Renault,SUV,2016,57400.0,58834.99999999999,9.0,11.6,122,1598,4,5,flexivel,automatico,marrom,74461,Tabela FIPE (estimado),Fabricante / INMETRO
+216,Renault Duster 1.4,Renault,SUV,2015,78600.0,80565.0,9.7,11.4,119,1598,4,5,flexivel,cvt,laranja,139848,Tabela FIPE (estimado),Fabricante / INMETRO
+217,Renault Duster DX,Renault,SUV,2022,57600.0,59039.99999999999,10.8,12.8,142,1598,4,5,flexivel,automatico,laranja,0,Tabela FIPE (estimado),Fabricante / INMETRO
+218,Renault Captur GTS,Renault,SUV,2017,67400.0,69085.0,11.4,14.9,108,1199,4,5,flexivel,cvt,vermelho,149982,Tabela FIPE (estimado),Fabricante / INMETRO
+219,Renault Captur LX,Renault,SUV,2017,79900.0,81897.5,10.6,12.8,109,1199,4,5,flexivel,automatico,bege,64193,Tabela FIPE (estimado),Fabricante / INMETRO
+220,Renault Captur Sport,Renault,SUV,2021,78600.0,80565.0,10.7,12.6,113,1199,4,5,flexivel,automatico,bege,121750,Tabela FIPE (estimado),Fabricante / INMETRO
+221,Renault Zoe 2.0,Renault,Eletrico,2023,145800.0,149445.0,52.6,70.9,105,0,4,5,eletrico,automatico,verde,0,Fabricante,Fabricante / INMETRO
+222,Renault Zoe RS,Renault,Eletrico,2023,135400.0,138785.0,50.8,60.9,101,0,4,5,eletrico,automatico,azul,0,Fabricante,Fabricante / INMETRO
+223,Renault Zoe Premium,Renault,Eletrico,2022,124200.0,127304.99999999999,50.4,67.5,109,0,4,5,eletrico,automatico,verde,0,Fabricante,Fabricante / INMETRO
+224,Renault Zoe S,Renault,Eletrico,2022,144400.0,148010.0,57.5,74.4,103,0,4,5,eletrico,automatico,prata,0,Fabricante,Fabricante / INMETRO
+225,Renault Master RS,Renault,Comercial,2022,162700.0,166767.5,7.0,8.2,126,2299,2,3,diesel,manual,marrom,0,Tabela FIPE (estimado),Fabricante / INMETRO
+226,Renault Master TDI,Renault,Comercial,2018,145000.0,148625.0,6.1,7.4,129,2299,2,3,diesel,manual,bege,74907,Tabela FIPE (estimado),Fabricante / INMETRO
+227,Renault Master SPORT,Renault,Comercial,2016,135900.0,139297.5,7.8,10.1,126,2299,2,3,diesel,manual,cinza,11860,Tabela FIPE (estimado),Fabricante / INMETRO
+228,Renault Master RS,Renault,Comercial,2024,143700.0,147292.5,6.7,8.1,126,2299,2,3,diesel,automatica,marrom,0,Tabela FIPE (estimado),Fabricante / INMETRO
+229,Renault Master LTZ,Renault,Comercial,2024,150800.0,154570.0,6.2,8.3,126,2299,2,3,diesel,automatica,cinza,0,Tabela FIPE (estimado),Fabricante / INMETRO
+230,Renault Master LTZ,Renault,Comercial,2017,121900.0,124947.49999999999,7.0,8.8,120,2299,2,3,diesel,automatica,branco,35923,Tabela FIPE (estimado),Fabricante / INMETRO
+231,Renault Oroch SPORT,Renault,Picape,2017,81200.0,83230.0,10.0,12.2,119,1598,4,5,flexivel,cvt,cinza,42598,Tabela FIPE (estimado),Fabricante / INMETRO
+232,Renault Oroch S,Renault,Picape,2019,80800.0,82820.0,10.0,12.5,115,1598,4,5,flexivel,manual,laranja,78588,Tabela FIPE (estimado),Fabricante / INMETRO
+233,Renault Oroch S,Renault,Picape,2020,71600.0,73390.0,9.2,11.3,109,1598,4,5,flexivel,automatico,branco,156476,Tabela FIPE (estimado),Fabricante / INMETRO
+234,Renault Oroch GL,Renault,Picape,2024,80200.0,82205.0,10.4,13.2,105,1598,4,5,flexivel,cvt,marrom,0,Tabela FIPE (estimado),Fabricante / INMETRO
+235,Renault Oroch GLX,Renault,Picape,2024,87100.0,89277.49999999999,9.8,12.9,107,1598,4,5,flexivel,cvt,branco,0,Tabela FIPE (estimado),Fabricante / INMETRO
+236,Renault Oroch SE,Renault,Picape,2016,66700.0,68367.5,9.9,12.2,113,1598,4,5,flexivel,cvt,vermelho,107577,Tabela FIPE (estimado),Fabricante / INMETRO
+237,Jeep Renegade SPORT,Jeep,SUV,2015,93800.0,96144.99999999999,9.3,11.7,162,1796,4,5,flexivel,automatico,bege,137750,Tabela FIPE (estimado),Fabricante / INMETRO
+238,Jeep Renegade S,Jeep,SUV,2017,80300.0,82307.5,9.3,11.7,163,1796,4,5,flexivel,manual,azul,159927,Tabela FIPE (estimado),Fabricante / INMETRO
+239,Jeep Renegade Sport,Jeep,SUV,2018,70300.0,72057.5,8.7,11.6,139,1796,4,5,flexivel,cvt,azul,184785,Tabela FIPE (estimado),Fabricante / INMETRO
+240,Jeep Renegade LT,Jeep,SUV,2022,72400.0,74210.0,8.9,11.9,170,1796,4,5,flexivel,manual,azul,0,Tabela FIPE (estimado),Fabricante / INMETRO
+241,Jeep Renegade 2.0,Jeep,SUV,2024,92200.0,94504.99999999999,8.9,12.0,172,1796,4,5,flexivel,automatico,cinza,0,Tabela FIPE (estimado),Fabricante / INMETRO
+242,Jeep Renegade S,Jeep,SUV,2015,70800.0,72570.0,9.8,11.9,148,1796,4,5,flexivel,manual,azul,195910,Tabela FIPE (estimado),Fabricante / INMETRO
+243,Jeep Compass GLX,Jeep,SUV,2024,101700.0,104242.49999999999,9.9,11.9,136,1332,4,5,flexivel,manual,laranja,0,Tabela FIPE (estimado),Fabricante / INMETRO
+244,Jeep Compass GTS,Jeep,SUV,2019,84100.0,86202.49999999999,10.8,12.9,144,1332,4,5,flexivel,automatico,branco,26266,Tabela FIPE (estimado),Fabricante / INMETRO
+245,Jeep Compass GTS,Jeep,SUV,2023,88000.0,90199.99999999999,10.4,12.0,165,1332,4,5,flexivel,cvt,prata,0,Tabela FIPE (estimado),Fabricante / INMETRO
+246,Jeep Compass GL,Jeep,SUV,2023,118200.0,121154.99999999999,9.0,12.1,150,1332,4,5,flexivel,manual,azul,0,Tabela FIPE (estimado),Fabricante / INMETRO
+247,Jeep Commander GT,Jeep,SUV,2022,166800.0,170969.99999999997,9.8,13.1,152,1995,4,7,flexivel,manual,verde,0,Tabela FIPE (estimado),Fabricante / INMETRO
+248,Jeep Commander,Jeep,SUV,2024,179400.0,183884.99999999997,8.5,11.0,167,1995,4,7,flexivel,automatico,branco,0,Tabela FIPE (estimado),Fabricante / INMETRO
+249,Jeep Commander 2.0,Jeep,SUV,2021,186400.0,191059.99999999997,8.8,10.9,199,1995,4,7,flexivel,cvt,marrom,129476,Tabela FIPE (estimado),Fabricante / INMETRO
+250,Jeep Wrangler GT,Jeep,SUV,2019,212800.0,218119.99999999997,5.8,6.9,258,1996,4,5,diesel,manual,azul,188376,Tabela FIPE (estimado),Fabricante / INMETRO
+251,Jeep Wrangler SPORT,Jeep,SUV,2020,314400.0,322260.0,6.9,9.0,222,1996,4,5,diesel,automatica,laranja,167438,Tabela FIPE (estimado),Fabricante / INMETRO
+252,Jeep Wrangler LTZ,Jeep,SUV,2023,235700.0,241592.49999999997,6.5,7.6,217,1996,4,5,diesel,manual,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+253,Jeep Wrangler GLX,Jeep,SUV,2015,224300.0,229907.49999999997,6.1,7.9,242,1996,4,5,diesel,manual,azul,152688,Tabela FIPE (estimado),Fabricante / INMETRO
+254,Jeep Wrangler GT,Jeep,SUV,2019,291100.0,298377.5,7.2,8.4,215,1996,4,5,diesel,automatica,bege,80427,Tabela FIPE (estimado),Fabricante / INMETRO
+255,Jeep Wrangler Advantage,Jeep,SUV,2023,336900.0,345322.49999999994,7.7,10.0,215,1996,4,5,diesel,manual,azul,0,Tabela FIPE (estimado),Fabricante / INMETRO
+256,Nissan Versa TDI,Nissan,Sedan,2012,46500.0,47662.49999999999,11.9,16.0,122,1598,4,5,flexivel,automatico,verde,184009,Tabela FIPE (estimado),Fabricante / INMETRO
+257,Nissan Versa 1.4,Nissan,Sedan,2022,49200.0,50429.99999999999,12.5,14.9,118,1598,4,5,flexivel,cvt,laranja,0,Tabela FIPE (estimado),Fabricante / INMETRO
+258,Nissan Versa SE,Nissan,Sedan,2017,48800.0,50019.99999999999,11.6,15.5,114,1598,4,5,flexivel,manual,branco,143562,Tabela FIPE (estimado),Fabricante / INMETRO
+259,Nissan Versa Sport,Nissan,Sedan,2019,49100.0,50327.49999999999,11.0,14.5,125,1598,4,5,flexivel,cvt,preto,178335,Tabela FIPE (estimado),Fabricante / INMETRO
+260,Nissan Kicks RS,Nissan,SUV,2017,105500.0,108137.49999999999,10.6,12.3,117,1598,4,5,flexivel,cvt,marrom,108901,Tabela FIPE (estimado),Fabricante / INMETRO
+261,Nissan Kicks,Nissan,SUV,2016,90100.0,92352.49999999999,11.2,13.6,113,1598,4,5,flexivel,cvt,verde,66704,Tabela FIPE (estimado),Fabricante / INMETRO
+262,Nissan Kicks 1.4,Nissan,SUV,2019,91000.0,93274.99999999999,9.6,11.7,115,1598,4,5,flexivel,automatico,marrom,15795,Tabela FIPE (estimado),Fabricante / INMETRO
+263,Nissan Kicks RS,Nissan,SUV,2016,77900.0,79847.5,9.9,11.7,126,1598,4,5,flexivel,automatico,cinza,100264,Tabela FIPE (estimado),Fabricante / INMETRO
+264,Nissan Kicks 1.6,Nissan,SUV,2022,68600.0,70315.0,11.9,15.8,117,1598,4,5,flexivel,manual,cinza,0,Tabela FIPE (estimado),Fabricante / INMETRO
+265,Nissan Kicks LT,Nissan,SUV,2024,82700.0,84767.49999999999,9.8,13.2,113,1598,4,5,flexivel,automatico,branco,0,Tabela FIPE (estimado),Fabricante / INMETRO
+266,Nissan Sentra 1.6,Nissan,Sedan,2018,69700.0,71442.5,10.2,12.7,134,1998,4,5,flexivel,manual,azul,49409,Tabela FIPE (estimado),Fabricante / INMETRO
+267,Nissan Sentra Sport,Nissan,Sedan,2022,87900.0,90097.49999999999,11.3,15.1,130,1998,4,5,flexivel,manual,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+268,Nissan Sentra 1.0,Nissan,Sedan,2011,83600.0,85689.99999999999,10.8,13.9,131,1998,4,5,flexivel,automatico,vermelho,194128,Tabela FIPE (estimado),Fabricante / INMETRO
+269,Nissan Sentra LT,Nissan,Sedan,2017,60200.0,61704.99999999999,10.2,13.5,131,1998,4,5,flexivel,manual,prata,132093,Tabela FIPE (estimado),Fabricante / INMETRO
+270,Nissan Sentra LT,Nissan,Sedan,2023,104600.0,107214.99999999999,11.2,14.2,140,1998,4,5,flexivel,manual,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+271,Nissan Sentra GT,Nissan,Sedan,2020,78900.0,80872.5,10.7,12.9,147,1998,4,5,flexivel,cvt,laranja,192731,Tabela FIPE (estimado),Fabricante / INMETRO
+272,Nissan Leaf SE,Nissan,Eletrico,2024,144900.0,148522.5,55.8,74.7,150,0,4,5,eletrico,automatico,verde,0,Fabricante,Fabricante / INMETRO
+273,Nissan Leaf S,Nissan,Eletrico,2022,150900.0,154672.5,52.4,63.4,146,0,4,5,eletrico,automatico,marrom,0,Fabricante,Fabricante / INMETRO
+274,Nissan Leaf GTS,Nissan,Eletrico,2021,155500.0,159387.5,51.8,66.9,148,0,4,5,eletrico,automatico,branco,147426,Fabricante,Fabricante / INMETRO
+275,Nissan Leaf GL,Nissan,Eletrico,2023,146700.0,150367.5,50.8,60.9,146,0,4,5,eletrico,automatico,cinza,0,Fabricante,Fabricante / INMETRO
+276,Nissan Leaf LS,Nissan,Eletrico,2020,157700.0,161642.5,55.1,64.4,150,0,4,5,eletrico,automatico,vermelho,13510,Fabricante,Fabricante / INMETRO
+277,Nissan Leaf LX,Nissan,Eletrico,2023,150200.0,153955.0,53.6,71.0,146,0,4,5,eletrico,automatico,laranja,0,Fabricante,Fabricante / INMETRO
+278,Nissan Frontier Sport,Nissan,Picape,2017,123000.0,126074.99999999999,8.8,10.7,188,2488,4,5,diesel,manual,branco,55524,Tabela FIPE (estimado),Fabricante / INMETRO
+279,Nissan Frontier Premium,Nissan,Picape,2021,210000.0,215249.99999999997,7.7,9.2,168,2488,4,5,diesel,automatica,vermelho,103974,Tabela FIPE (estimado),Fabricante / INMETRO
+280,Nissan Frontier Advantage,Nissan,Picape,2022,131100.0,134377.5,7.7,9.9,149,2488,4,5,diesel,automatica,azul,0,Tabela FIPE (estimado),Fabricante / INMETRO
+281,Nissan Frontier Advantage,Nissan,Picape,2017,110800.0,113569.99999999999,9.0,11.2,183,2488,4,5,diesel,automatica,cinza,53248,Tabela FIPE (estimado),Fabricante / INMETRO
+282,BYD Dolphin Mini GLX,BYD,Eletrico,2023,70600.0,72365.0,56.5,66.6,74,0,4,5,eletrico,automatico,marrom,0,Fabricante,Fabricante / INMETRO
+283,BYD Dolphin Mini S,BYD,Eletrico,2024,68000.0,69700.0,56.4,67.5,79,0,4,5,eletrico,automatico,vermelho,0,Fabricante,Fabricante / INMETRO
+284,BYD Dolphin Mini RS,BYD,Eletrico,2024,67600.0,69290.0,60.8,81.7,80,0,4,5,eletrico,automatico,bege,0,Fabricante,Fabricante / INMETRO
+285,BYD Dolphin Mini GT,BYD,Eletrico,2023,72300.0,74107.5,57.5,67.7,78,0,4,5,eletrico,automatico,bege,0,Fabricante,Fabricante / INMETRO
+286,BYD Dolphin Mini,BYD,Eletrico,2023,70200.0,71955.0,60.9,70.9,80,0,4,5,eletrico,automatico,branco,0,Fabricante,Fabricante / INMETRO
+287,BYD Dolphin Mini Sport,BYD,Eletrico,2024,66400.0,68060.0,59.4,69.1,72,0,4,5,eletrico,automatico,branco,0,Fabricante,Fabricante / INMETRO
+288,BYD Dolphin,BYD,Eletrico,2024,91200.0,93479.99999999999,55.1,73.7,97,0,4,5,eletrico,automatico,bege,0,Fabricante,Fabricante / INMETRO
+289,BYD Dolphin LT,BYD,Eletrico,2023,100600.0,103114.99999999999,53.3,61.5,94,0,4,5,eletrico,automatico,marrom,0,Fabricante,Fabricante / INMETRO
+290,BYD Dolphin 1.6,BYD,Eletrico,2023,100000.0,102499.99999999999,55.6,68.7,92,0,4,5,eletrico,automatico,preto,0,Fabricante,Fabricante / INMETRO
+291,BYD Dolphin SPORT,BYD,Eletrico,2023,94800.0,97169.99999999999,55.0,66.0,95,0,4,5,eletrico,automatico,azul,0,Fabricante,Fabricante / INMETRO
+292,BYD Dolphin LX,BYD,Eletrico,2023,97500.0,99937.49999999999,53.2,67.2,93,0,4,5,eletrico,automatico,azul,0,Fabricante,Fabricante / INMETRO
+293,BYD Dolphin SPORT,BYD,Eletrico,2023,103100.0,105677.49999999999,56.9,74.1,91,0,4,5,eletrico,automatico,verde,0,Fabricante,Fabricante / INMETRO
+294,BYD Yuan Pro GL,BYD,Eletrico,2024,121100.0,124127.49999999999,48.1,57.0,155,0,4,5,eletrico,automatico,verde,0,Fabricante,Fabricante / INMETRO
+295,BYD Yuan Pro Premium,BYD,Eletrico,2024,131300.0,134582.5,54.0,63.1,156,0,4,5,eletrico,automatico,branco,0,Fabricante,Fabricante / INMETRO
+296,BYD Yuan Pro 1.4,BYD,Eletrico,2023,138000.0,141450.0,52.8,66.7,148,0,4,5,eletrico,automatico,branco,0,Fabricante,Fabricante / INMETRO
+297,BYD Yuan Pro Sport,BYD,Eletrico,2024,138000.0,141450.0,51.9,60.0,150,0,4,5,eletrico,automatico,branco,0,Fabricante,Fabricante / INMETRO
+298,BYD Yuan Pro GT,BYD,Eletrico,2023,135000.0,138375.0,53.0,65.2,142,0,4,5,eletrico,automatico,azul,0,Fabricante,Fabricante / INMETRO
+299,BYD Yuan Pro SPORT,BYD,Eletrico,2023,131300.0,134582.5,53.9,69.3,157,0,4,5,eletrico,automatico,cinza,0,Fabricante,Fabricante / INMETRO
+300,BYD Song Plus 1.4,BYD,Eletrico,2023,172500.0,176812.49999999997,51.8,60.1,223,0,4,5,eletrico,automatico,vermelho,0,Fabricante,Fabricante / INMETRO
+301,BYD Song Plus GL,BYD,Eletrico,2024,175100.0,179477.49999999997,49.3,62.6,220,0,4,5,eletrico,automatico,branco,0,Fabricante,Fabricante / INMETRO
+302,BYD Song Plus GTS,BYD,Eletrico,2024,179600.0,184089.99999999997,48.2,57.6,227,0,4,5,eletrico,automatico,verde,0,Fabricante,Fabricante / INMETRO
+303,BYD Song Plus Premium,BYD,Eletrico,2023,177000.0,181424.99999999997,49.6,57.9,229,0,4,5,eletrico,automatico,azul,0,Fabricante,Fabricante / INMETRO
+304,BYD Seal LTZ,BYD,Eletrico,2023,208000.0,213199.99999999997,43.0,56.2,314,0,4,5,eletrico,automatico,verde,0,Fabricante,Fabricante / INMETRO
+305,BYD Seal 1.6,BYD,Eletrico,2024,203200.0,208279.99999999997,40.0,48.5,321,0,4,5,eletrico,automatico,azul,0,Fabricante,Fabricante / INMETRO
+306,BYD Seal 1.6,BYD,Eletrico,2023,202600.0,207664.99999999997,43.4,54.7,326,0,4,5,eletrico,automatico,verde,0,Fabricante,Fabricante / INMETRO
+307,GWM Haval H6,GWM,Eletrico,2023,190600.0,195364.99999999997,42.7,54.2,390,0,4,5,eletrico,automatico,verde,0,Fabricante,Fabricante / INMETRO
+308,GWM Haval H6 GLX,GWM,Eletrico,2024,192400.0,197209.99999999997,48.2,62.4,397,0,4,5,eletrico,automatico,vermelho,0,Fabricante,Fabricante / INMETRO
+309,GWM Haval H6 2.0,GWM,Eletrico,2023,200600.0,205614.99999999997,43.4,52.2,388,0,4,5,eletrico,automatico,bege,0,Fabricante,Fabricante / INMETRO
+310,GWM Ora 03 LS,GWM,Eletrico,2023,133000.0,136325.0,50.9,63.5,172,0,4,5,eletrico,automatico,cinza,0,Fabricante,Fabricante / INMETRO
+311,GWM Ora 03 2.0,GWM,Eletrico,2023,141600.0,145140.0,51.5,65.6,184,0,4,5,eletrico,automatico,preto,0,Fabricante,Fabricante / INMETRO
+312,GWM Ora 03 RS,GWM,Eletrico,2024,120200.0,123204.99999999999,50.8,67.0,182,0,4,5,eletrico,automatico,cinza,0,Fabricante,Fabricante / INMETRO
+313,Caoa Chery Tiggo 5X LTZ,Caoa Chery,SUV,2023,95400.0,97784.99999999999,11.1,14.9,121,1498,4,5,flexivel,cvt,azul,0,Tabela FIPE (estimado),Fabricante / INMETRO
+314,Caoa Chery Tiggo 5X GL,Caoa Chery,SUV,2021,87000.0,89174.99999999999,9.4,11.6,133,1498,4,5,flexivel,automatico,azul,192642,Tabela FIPE (estimado),Fabricante / INMETRO
+315,Caoa Chery Tiggo 5X 1.6,Caoa Chery,SUV,2024,94500.0,96862.49999999999,9.8,11.8,138,1498,4,5,flexivel,cvt,cinza,0,Tabela FIPE (estimado),Fabricante / INMETRO
+316,Caoa Chery Tiggo 5X RS,Caoa Chery,SUV,2021,89800.0,92044.99999999999,10.4,13.4,148,1498,4,5,flexivel,cvt,branco,190634,Tabela FIPE (estimado),Fabricante / INMETRO
+317,Caoa Chery Tiggo 5X GL,Caoa Chery,SUV,2021,86000.0,88149.99999999999,9.7,12.5,139,1498,4,5,flexivel,automatico,bege,36484,Tabela FIPE (estimado),Fabricante / INMETRO
+318,Caoa Chery Tiggo 7 DX,Caoa Chery,SUV,2023,123100.0,126177.49999999999,10.3,13.5,152,1498,4,5,flexivel,automatico,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+319,Caoa Chery Tiggo 7 1.0,Caoa Chery,SUV,2024,118700.0,121667.49999999999,10.8,14.3,163,1498,4,5,flexivel,automatico,marrom,0,Tabela FIPE (estimado),Fabricante / INMETRO
+320,Caoa Chery Tiggo 7 GLX,Caoa Chery,SUV,2021,103800.0,106394.99999999999,9.1,11.7,155,1498,4,5,flexivel,cvt,laranja,11612,Tabela FIPE (estimado),Fabricante / INMETRO
+321,Caoa Chery Tiggo 7 1.6,Caoa Chery,SUV,2024,133800.0,137145.0,9.3,12.2,153,1498,4,5,flexivel,automatico,branco,0,Tabela FIPE (estimado),Fabricante / INMETRO
+322,Caoa Chery Tiggo 8 2.0,Caoa Chery,SUV,2022,157800.0,161745.0,9.0,11.7,217,1998,4,7,flexivel,automatico,marrom,0,Tabela FIPE (estimado),Fabricante / INMETRO
+323,Caoa Chery Tiggo 8 2.0,Caoa Chery,SUV,2021,159300.0,163282.5,8.7,11.6,185,1998,4,7,flexivel,automatico,preto,191404,Tabela FIPE (estimado),Fabricante / INMETRO
+324,Caoa Chery Tiggo 8 1.6,Caoa Chery,SUV,2023,153700.0,157542.5,10.0,12.5,202,1998,4,7,flexivel,automatico,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+325,Caoa Chery Tiggo 8 LTZ,Caoa Chery,SUV,2024,152800.0,156620.0,8.8,11.5,187,1998,4,7,flexivel,cvt,branco,0,Tabela FIPE (estimado),Fabricante / INMETRO
+326,Peugeot 208 GTS,Peugeot,Economico,2018,73200.0,75030.0,13.4,16.8,80,1199,4,5,flexivel,automatico,cinza,146761,Tabela FIPE (estimado),Fabricante / INMETRO
+327,Peugeot 208 DX,Peugeot,Economico,2019,69900.0,71647.5,13.1,15.6,88,1199,4,5,flexivel,manual,verde,7652,Tabela FIPE (estimado),Fabricante / INMETRO
+328,Peugeot 208 1.4,Peugeot,Economico,2023,64800.0,66420.0,12.5,16.1,81,1199,4,5,flexivel,cvt,azul,0,Tabela FIPE (estimado),Fabricante / INMETRO
+329,Peugeot 2008 SE,Peugeot,SUV,2023,61500.0,63037.49999999999,9.8,12.2,91,1199,4,5,flexivel,cvt,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+330,Peugeot 2008 DX,Peugeot,SUV,2020,75900.0,77797.5,10.5,13.3,97,1199,4,5,flexivel,manual,cinza,120025,Tabela FIPE (estimado),Fabricante / INMETRO
+331,Peugeot 2008 LT,Peugeot,SUV,2019,87200.0,89379.99999999999,10.5,13.5,95,1199,4,5,flexivel,manual,preto,62540,Tabela FIPE (estimado),Fabricante / INMETRO
+332,Peugeot e-208 SPORT,Peugeot,Eletrico,2023,150800.0,154570.0,51.1,63.0,132,0,4,5,eletrico,automatico,laranja,0,Fabricante,Fabricante / INMETRO
+333,Peugeot e-208 TDI,Peugeot,Eletrico,2023,135600.0,138990.0,51.8,66.8,140,0,4,5,eletrico,automatico,prata,0,Fabricante,Fabricante / INMETRO
+334,Peugeot e-208 1.0,Peugeot,Eletrico,2022,144700.0,148317.5,48.8,59.2,137,0,4,5,eletrico,automatico,laranja,0,Fabricante,Fabricante / INMETRO
+335,Peugeot e-208 SE,Peugeot,Eletrico,2023,158600.0,162565.0,50.9,60.5,136,0,4,5,eletrico,automatico,marrom,0,Fabricante,Fabricante / INMETRO
+336,Peugeot Partner GLX,Peugeot,Comercial,2021,75500.0,77387.5,8.8,11.6,90,1199,2,2,flexivel,manual,prata,21671,Tabela FIPE (estimado),Fabricante / INMETRO
+337,Peugeot Partner S,Peugeot,Comercial,2018,63800.0,65394.99999999999,8.5,10.7,80,1199,2,2,flexivel,cvt,bege,148281,Tabela FIPE (estimado),Fabricante / INMETRO
+338,Peugeot Partner 1.0,Peugeot,Comercial,2023,58400.0,59859.99999999999,8.2,10.7,86,1199,2,2,flexivel,cvt,marrom,0,Tabela FIPE (estimado),Fabricante / INMETRO
+339,Peugeot Partner LT,Peugeot,Comercial,2022,71400.0,73185.0,10.0,11.7,95,1199,2,2,flexivel,manual,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+340,Peugeot Partner Sport,Peugeot,Comercial,2022,62900.0,64472.49999999999,9.7,11.3,78,1199,2,2,flexivel,cvt,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+341,Peugeot Partner DX,Peugeot,Comercial,2024,75700.0,77592.5,9.7,12.3,88,1199,2,2,flexivel,manual,prata,0,Tabela FIPE (estimado),Fabricante / INMETRO
+342,Citroën C3 LTZ,Citroën,Economico,2015,55100.0,56477.49999999999,13.4,16.8,84,999,4,5,flexivel,cvt,marrom,44139,Tabela FIPE (estimado),Fabricante / INMETRO
+343,Citroën C3 GTS,Citroën,Economico,2016,42200.0,43254.99999999999,12.7,16.8,68,999,4,5,flexivel,manual,prata,196632,Tabela FIPE (estimado),Fabricante / INMETRO
+344,Citroën C3 LTZ,Citroën,Economico,2016,56700.0,58117.49999999999,12.3,16.3,72,999,4,5,flexivel,manual,prata,186487,Tabela FIPE (estimado),Fabricante / INMETRO
+345,Citroën C3 GL,Citroën,Economico,2024,56100.0,57502.49999999999,13.0,15.3,85,999,4,5,flexivel,automatico,azul,0,Tabela FIPE (estimado),Fabricante / INMETRO
+346,Citroën C4 Cactus LS,Citroën,SUV,2021,67300.0,68982.5,11.5,15.0,140,1199,4,5,flexivel,cvt,marrom,196556,Tabela FIPE (estimado),Fabricante / INMETRO
+347,Citroën C4 Cactus LX,Citroën,SUV,2020,78600.0,80565.0,10.7,13.6,120,1199,4,5,flexivel,cvt,bege,166419,Tabela FIPE (estimado),Fabricante / INMETRO
+348,Citroën C4 Cactus LS,Citroën,SUV,2020,90500.0,92762.49999999999,11.5,14.1,142,1199,4,5,flexivel,automatico,vermelho,129686,Tabela FIPE (estimado),Fabricante / INMETRO
+349,Citroën C4 Cactus LX,Citroën,SUV,2024,73500.0,75337.5,10.9,12.8,146,1199,4,5,flexivel,manual,cinza,0,Tabela FIPE (estimado),Fabricante / INMETRO
+350,Citroën C4 Cactus RS,Citroën,SUV,2018,68000.0,69700.0,11.5,14.3,122,1199,4,5,flexivel,manual,prata,115680,Tabela FIPE (estimado),Fabricante / INMETRO
+351,Citroën C4 Cactus 1.4,Citroën,SUV,2021,71100.0,72877.5,11.2,13.2,134,1199,4,5,flexivel,cvt,prata,71832,Tabela FIPE (estimado),Fabricante / INMETRO
+352,BMW 320i LT,BMW,Sedan,2019,128200.0,131405.0,10.5,13.4,187,1998,4,5,flexivel,cvt,verde,163998,Tabela FIPE (estimado),Fabricante / INMETRO
+353,BMW 320i 2.0,BMW,Sedan,2018,162900.0,166972.5,8.8,10.3,197,1998,4,5,flexivel,cvt,bege,20431,Tabela FIPE (estimado),Fabricante / INMETRO
+354,BMW 320i 2.0,BMW,Sedan,2018,171900.0,176197.49999999997,9.8,11.3,205,1998,4,5,flexivel,automatico,preto,110707,Tabela FIPE (estimado),Fabricante / INMETRO
+355,BMW 320i LT,BMW,Sedan,2016,142900.0,146472.5,8.8,11.5,190,1998,4,5,flexivel,manual,cinza,96354,Tabela FIPE (estimado),Fabricante / INMETRO
+356,BMW 320i SE,BMW,Sedan,2021,197300.0,202232.49999999997,10.8,12.7,227,1998,4,5,flexivel,cvt,prata,17933,Tabela FIPE (estimado),Fabricante / INMETRO
+357,BMW X1 GTS,BMW,SUV,2024,201500.0,206537.49999999997,9.3,12.0,190,1998,4,5,flexivel,cvt,prata,0,Tabela FIPE (estimado),Fabricante / INMETRO
+358,BMW X1 GLX,BMW,SUV,2022,224600.0,230214.99999999997,8.3,9.7,198,1998,4,5,flexivel,cvt,preto,0,Tabela FIPE (estimado),Fabricante / INMETRO
+359,BMW X1 1.4,BMW,SUV,2021,168700.0,172917.49999999997,9.3,12.2,165,1998,4,5,flexivel,manual,azul,168983,Tabela FIPE (estimado),Fabricante / INMETRO
+360,BMW X3 Sport,BMW,SUV,2015,298700.0,306167.5,9.5,11.5,250,1998,4,5,flexivel,cvt,laranja,133568,Tabela FIPE (estimado),Fabricante / INMETRO
+361,BMW X3 1.6,BMW,SUV,2021,221400.0,226934.99999999997,7.7,10.2,214,1998,4,5,flexivel,manual,bege,101157,Tabela FIPE (estimado),Fabricante / INMETRO
+362,BMW X3 LTZ,BMW,SUV,2022,269300.0,276032.5,7.7,10.2,185,1998,4,5,flexivel,manual,cinza,0,Tabela FIPE (estimado),Fabricante / INMETRO
+363,BMW X3,BMW,SUV,2021,300500.0,308012.5,9.2,11.3,206,1998,4,5,flexivel,cvt,bege,19134,Tabela FIPE (estimado),Fabricante / INMETRO
+364,BMW X3 GL,BMW,SUV,2016,181900.0,186447.49999999997,8.1,10.8,234,1998,4,5,flexivel,cvt,marrom,75101,Tabela FIPE (estimado),Fabricante / INMETRO
+365,BMW i4 LS,BMW,Eletrico,2023,329100.0,337327.49999999994,42.7,53.7,349,0,4,5,eletrico,automatico,prata,0,Fabricante,Fabricante / INMETRO
+366,BMW i4 LTZ,BMW,Eletrico,2022,301700.0,309242.5,46.1,54.9,334,0,4,5,eletrico,automatico,marrom,0,Fabricante,Fabricante / INMETRO
+367,BMW i4 LT,BMW,Eletrico,2023,321100.0,329127.5,48.1,61.6,350,0,4,5,eletrico,automatico,preto,0,Fabricante,Fabricante / INMETRO
+368,BMW i4 GTS,BMW,Eletrico,2024,310600.0,318365.0,49.6,59.4,337,0,4,5,eletrico,automatico,preto,0,Fabricante,Fabricante / INMETRO
+369,BMW i4,BMW,Eletrico,2022,311700.0,319492.5,46.9,56.8,335,0,4,5,eletrico,automatico,preto,0,Fabricante,Fabricante / INMETRO
+370,BMW i4 SE,BMW,Eletrico,2024,289600.0,296840.0,42.1,52.6,341,0,4,5,eletrico,automatico,marrom,0,Fabricante,Fabricante / INMETRO
+371,Mercedes-Benz C200 GTS,Mercedes,Sedan,2017,177200.0,181629.99999999997,10.7,14.2,187,1991,4,5,flexivel,automatico,branco,87821,Tabela FIPE (estimado),Fabricante / INMETRO
+372,Mercedes-Benz C200 RS,Mercedes,Sedan,2023,146400.0,150060.0,10.6,13.4,186,1991,4,5,flexivel,cvt,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+373,Mercedes-Benz C200 GLX,Mercedes,Sedan,2020,145500.0,149137.5,11.1,13.1,189,1991,4,5,flexivel,cvt,azul,26975,Tabela FIPE (estimado),Fabricante / INMETRO
+374,Mercedes-Benz C200 S,Mercedes,Sedan,2016,162800.0,166870.0,10.0,11.6,184,1991,4,5,flexivel,automatico,vermelho,12053,Tabela FIPE (estimado),Fabricante / INMETRO
+375,Mercedes-Benz C200 GL,Mercedes,Sedan,2021,232000.0,237799.99999999997,9.0,12.1,185,1991,4,5,flexivel,automatico,marrom,187176,Tabela FIPE (estimado),Fabricante / INMETRO
+376,Mercedes-Benz GLA 1.6,Mercedes,SUV,2020,179800.0,184294.99999999997,10.7,13.0,159,1991,4,5,flexivel,cvt,laranja,97729,Tabela FIPE (estimado),Fabricante / INMETRO
+377,Mercedes-Benz GLA LT,Mercedes,SUV,2015,171500.0,175787.49999999997,10.4,14.0,201,1991,4,5,flexivel,automatico,preto,121921,Tabela FIPE (estimado),Fabricante / INMETRO
+378,Mercedes-Benz GLA DX,Mercedes,SUV,2020,160400.0,164410.0,9.4,11.5,187,1991,4,5,flexivel,manual,laranja,79668,Tabela FIPE (estimado),Fabricante / INMETRO
+379,Mercedes-Benz GLA Premium,Mercedes,SUV,2022,194200.0,199054.99999999997,10.9,14.7,175,1991,4,5,flexivel,manual,marrom,0,Tabela FIPE (estimado),Fabricante / INMETRO
+380,Mercedes-Benz GLB LTZ,Mercedes,SUV,2023,222400.0,227959.99999999997,9.4,12.0,207,1991,4,7,flexivel,manual,branco,0,Tabela FIPE (estimado),Fabricante / INMETRO
+381,Mercedes-Benz GLB GTS,Mercedes,SUV,2023,304900.0,312522.5,9.8,11.5,196,1991,4,7,flexivel,automatico,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+382,Mercedes-Benz GLB GTS,Mercedes,SUV,2020,317300.0,325232.5,8.4,10.1,165,1991,4,7,flexivel,cvt,vermelho,136251,Tabela FIPE (estimado),Fabricante / INMETRO
+383,Mercedes-Benz EQA 1.4,Mercedes,Eletrico,2023,348200.0,356904.99999999994,42.7,49.9,194,0,4,5,eletrico,automatico,verde,0,Fabricante,Fabricante / INMETRO
+384,Mercedes-Benz EQA LS,Mercedes,Eletrico,2024,319700.0,327692.5,45.5,61.1,197,0,4,5,eletrico,automatico,azul,0,Fabricante,Fabricante / INMETRO
+385,Mercedes-Benz EQA RS,Mercedes,Eletrico,2023,344800.0,353419.99999999994,45.1,59.4,200,0,4,5,eletrico,automatico,cinza,0,Fabricante,Fabricante / INMETRO
+386,Mercedes-Benz EQA 2.0,Mercedes,Eletrico,2023,296400.0,303810.0,49.5,58.3,208,0,4,5,eletrico,automatico,preto,0,Fabricante,Fabricante / INMETRO
+387,Mercedes-Benz EQA Sport,Mercedes,Eletrico,2022,291500.0,298787.5,45.7,56.3,207,0,4,5,eletrico,automatico,cinza,0,Fabricante,Fabricante / INMETRO
+388,Audi A3 Sport,Audi,Sedan,2019,157100.0,161027.5,12.1,14.1,169,1984,4,5,flexivel,automatico,laranja,10572,Tabela FIPE (estimado),Fabricante / INMETRO
+389,Audi A3 LT,Audi,Sedan,2017,127300.0,130482.49999999999,10.2,12.5,182,1984,4,5,flexivel,automatico,branco,177519,Tabela FIPE (estimado),Fabricante / INMETRO
+390,Audi A3 RS,Audi,Sedan,2017,122500.0,125562.49999999999,10.7,13.3,185,1984,4,5,flexivel,manual,vermelho,24831,Tabela FIPE (estimado),Fabricante / INMETRO
+391,Audi A3 SPORT,Audi,Sedan,2017,129700.0,132942.5,9.7,12.7,164,1984,4,5,flexivel,automatico,prata,51939,Tabela FIPE (estimado),Fabricante / INMETRO
+392,Audi A3 GL,Audi,Sedan,2016,166600.0,170764.99999999997,10.3,13.5,151,1984,4,5,flexivel,automatico,preto,51839,Tabela FIPE (estimado),Fabricante / INMETRO
+393,Audi A3 1.0,Audi,Sedan,2017,127400.0,130584.99999999999,12.0,15.7,157,1984,4,5,flexivel,manual,branco,120847,Tabela FIPE (estimado),Fabricante / INMETRO
+394,Audi Q3 LS,Audi,SUV,2021,189600.0,194339.99999999997,9.6,11.9,195,1984,4,5,flexivel,automatico,vermelho,49060,Tabela FIPE (estimado),Fabricante / INMETRO
+395,Audi Q3 S,Audi,SUV,2022,228300.0,234007.49999999997,8.6,11.0,181,1984,4,5,flexivel,automatico,azul,0,Tabela FIPE (estimado),Fabricante / INMETRO
+396,Audi Q3 GL,Audi,SUV,2023,187900.0,192597.49999999997,8.8,10.8,203,1984,4,5,flexivel,cvt,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+397,Audi Q3 TDI,Audi,SUV,2018,203100.0,208177.49999999997,10.9,14.3,198,1984,4,5,flexivel,automatico,cinza,125746,Tabela FIPE (estimado),Fabricante / INMETRO
+398,Audi Q3 DX,Audi,SUV,2020,231300.0,237082.49999999997,10.0,12.3,173,1984,4,5,flexivel,manual,branco,83591,Tabela FIPE (estimado),Fabricante / INMETRO
+399,Audi Q3 GLX,Audi,SUV,2015,229600.0,235339.99999999997,10.8,12.5,210,1984,4,5,flexivel,manual,marrom,93698,Tabela FIPE (estimado),Fabricante / INMETRO
+400,Audi Q5 SPORT,Audi,SUV,2016,237200.0,243129.99999999997,8.2,10.3,197,1984,4,5,flexivel,automatico,vermelho,150914,Tabela FIPE (estimado),Fabricante / INMETRO
+401,Audi Q5 Advantage,Audi,SUV,2017,226400.0,232059.99999999997,9.3,12.2,235,1984,4,5,flexivel,cvt,laranja,7394,Tabela FIPE (estimado),Fabricante / INMETRO
+402,Audi Q5 LT,Audi,SUV,2024,221300.0,226832.49999999997,10.3,13.6,253,1984,4,5,flexivel,manual,marrom,0,Tabela FIPE (estimado),Fabricante / INMETRO
+403,Audi Q5 S,Audi,SUV,2022,205700.0,210842.49999999997,7.7,9.8,192,1984,4,5,flexivel,manual,marrom,0,Tabela FIPE (estimado),Fabricante / INMETRO
+404,Audi e-tron 1.0,Audi,Eletrico,2024,370100.0,379352.49999999994,38.9,50.3,358,0,4,5,eletrico,automatico,cinza,0,Fabricante,Fabricante / INMETRO
+405,Audi e-tron Advantage,Audi,Eletrico,2022,364800.0,373919.99999999994,42.9,50.6,307,0,4,5,eletrico,automatico,marrom,0,Fabricante,Fabricante / INMETRO
+406,Audi e-tron LT,Audi,Eletrico,2022,387400.0,397084.99999999994,44.6,54.8,306,0,4,5,eletrico,automatico,cinza,0,Fabricante,Fabricante / INMETRO
+407,Audi e-tron GL,Audi,Eletrico,2023,363600.0,372689.99999999994,39.1,52.4,350,0,4,5,eletrico,automatico,bege,0,Fabricante,Fabricante / INMETRO
+408,Audi e-tron Advantage,Audi,Eletrico,2023,367400.0,376584.99999999994,44.8,57.7,359,0,4,5,eletrico,automatico,laranja,0,Fabricante,Fabricante / INMETRO
+409,Ford Ka GT,Ford,Economico,2024,42700.0,43767.49999999999,12.4,15.0,89,999,4,5,flexivel,cvt,prata,0,Tabela FIPE (estimado),Fabricante / INMETRO
+410,Ford Ka LTZ,Ford,Economico,2014,53500.0,54837.49999999999,14.4,17.7,81,999,4,5,flexivel,cvt,prata,157912,Tabela FIPE (estimado),Fabricante / INMETRO
+411,Ford Ka Advantage,Ford,Economico,2017,44200.0,45304.99999999999,12.3,15.4,90,999,4,5,flexivel,automatico,preto,62389,Tabela FIPE (estimado),Fabricante / INMETRO
+412,Ford Ka LS,Ford,Economico,2016,44100.0,45202.49999999999,14.4,18.9,90,999,4,5,flexivel,manual,bege,2987,Tabela FIPE (estimado),Fabricante / INMETRO
+413,Ford EcoSport SPORT,Ford,SUV,2024,43100.0,44177.49999999999,9.1,10.7,100,1598,4,5,flexivel,automatico,branco,0,Tabela FIPE (estimado),Fabricante / INMETRO
+414,Ford EcoSport TDI,Ford,SUV,2024,58900.0,60372.49999999999,8.9,11.0,124,1598,4,5,flexivel,automatico,cinza,0,Tabela FIPE (estimado),Fabricante / INMETRO
+415,Ford EcoSport 1.4,Ford,SUV,2014,77300.0,79232.5,10.5,13.3,114,1598,4,5,flexivel,manual,prata,118302,Tabela FIPE (estimado),Fabricante / INMETRO
+416,Ford EcoSport GT,Ford,SUV,2017,40900.0,41922.5,9.2,10.8,121,1598,4,5,flexivel,cvt,prata,98424,Tabela FIPE (estimado),Fabricante / INMETRO
+417,Ford Ranger,Ford,Picape,2020,204800.0,209919.99999999997,9.4,11.4,199,1996,4,5,diesel,automatica,bege,184681,Tabela FIPE (estimado),Fabricante / INMETRO
+418,Ford Ranger Sport,Ford,Picape,2022,134800.0,138170.0,9.2,10.9,166,1996,4,5,diesel,manual,cinza,0,Tabela FIPE (estimado),Fabricante / INMETRO
+419,Ford Ranger Premium,Ford,Picape,2018,182700.0,187267.49999999997,8.8,11.4,176,1996,4,5,diesel,manual,azul,77961,Tabela FIPE (estimado),Fabricante / INMETRO
+420,Ford Transit 1.4,Ford,Comercial,2021,174300.0,178657.49999999997,7.7,9.1,153,2198,2,3,diesel,automatica,branco,112094,Tabela FIPE (estimado),Fabricante / INMETRO
+421,Ford Transit 1.4,Ford,Comercial,2024,168800.0,173019.99999999997,6.2,7.4,170,2198,2,3,diesel,automatica,azul,0,Tabela FIPE (estimado),Fabricante / INMETRO
+422,Ford Transit TDI,Ford,Comercial,2016,158500.0,162462.5,6.8,8.5,146,2198,2,3,diesel,automatica,preto,168261,Tabela FIPE (estimado),Fabricante / INMETRO
+423,Ford Territory RS,Ford,SUV,2022,155400.0,159285.0,9.4,11.6,158,1498,4,5,flexivel,automatico,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+424,Ford Territory LX,Ford,SUV,2021,153500.0,157337.5,9.9,11.7,172,1498,4,5,flexivel,automatico,preto,22467,Tabela FIPE (estimado),Fabricante / INMETRO
+425,Ford Territory SE,Ford,SUV,2024,136600.0,140015.0,10.4,12.4,151,1498,4,5,flexivel,automatico,verde,0,Tabela FIPE (estimado),Fabricante / INMETRO
+426,Ford Territory LT,Ford,SUV,2024,147500.0,151187.5,10.8,13.7,157,1498,4,5,flexivel,manual,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+427,Mitsubishi L200 LX,Mitsubishi,Picape,2024,221000.0,226524.99999999997,6.1,7.7,176,2442,4,5,diesel,manual,laranja,0,Tabela FIPE (estimado),Fabricante / INMETRO
+428,Mitsubishi L200 2.0,Mitsubishi,Picape,2011,233400.0,239234.99999999997,7.1,9.5,165,2442,4,5,diesel,manual,vermelho,50521,Tabela FIPE (estimado),Fabricante / INMETRO
+429,Mitsubishi L200 LS,Mitsubishi,Picape,2016,120200.0,123204.99999999999,7.7,9.2,186,2442,4,5,diesel,automatica,prata,155988,Tabela FIPE (estimado),Fabricante / INMETRO
+430,Mitsubishi L200 TDI,Mitsubishi,Picape,2024,204500.0,209612.49999999997,8.0,9.3,177,2442,4,5,diesel,automatica,verde,0,Tabela FIPE (estimado),Fabricante / INMETRO
+431,Mitsubishi L200 GLX,Mitsubishi,Picape,2023,145900.0,149547.5,7.1,9.4,185,2442,4,5,diesel,automatica,laranja,0,Tabela FIPE (estimado),Fabricante / INMETRO
+432,Mitsubishi L200 GLX,Mitsubishi,Picape,2011,163900.0,167997.49999999997,6.4,8.1,184,2442,4,5,diesel,manual,preto,27691,Tabela FIPE (estimado),Fabricante / INMETRO
+433,Mitsubishi Pajero Sport DX,Mitsubishi,SUV,2023,268000.0,274700.0,8.7,10.5,191,2442,4,7,diesel,automatica,laranja,0,Tabela FIPE (estimado),Fabricante / INMETRO
+434,Mitsubishi Pajero Sport LTZ,Mitsubishi,SUV,2015,197200.0,202129.99999999997,7.5,9.6,185,2442,4,7,diesel,manual,branco,103754,Tabela FIPE (estimado),Fabricante / INMETRO
+435,Mitsubishi Pajero Sport LT,Mitsubishi,SUV,2015,254600.0,260964.99999999997,8.8,11.7,161,2442,4,7,diesel,automatica,cinza,79444,Tabela FIPE (estimado),Fabricante / INMETRO
+436,Mitsubishi Pajero Sport LT,Mitsubishi,SUV,2022,265800.0,272445.0,8.2,11.0,174,2442,4,7,diesel,automatica,prata,0,Tabela FIPE (estimado),Fabricante / INMETRO
+437,Mitsubishi Pajero Sport GTS,Mitsubishi,SUV,2020,206900.0,212072.49999999997,7.5,9.6,172,2442,4,7,diesel,automatica,bege,55414,Tabela FIPE (estimado),Fabricante / INMETRO
+438,Mitsubishi Eclipse Cross SE,Mitsubishi,SUV,2019,125800.0,128944.99999999999,9.4,11.4,169,1498,4,5,flexivel,cvt,verde,35559,Tabela FIPE (estimado),Fabricante / INMETRO
+439,Mitsubishi Eclipse Cross RS,Mitsubishi,SUV,2019,108700.0,111417.49999999999,11.2,13.3,165,1498,4,5,flexivel,manual,vermelho,8669,Tabela FIPE (estimado),Fabricante / INMETRO
+440,Mitsubishi Eclipse Cross 1.6,Mitsubishi,SUV,2021,135200.0,138580.0,9.7,12.8,169,1498,4,5,flexivel,cvt,verde,166568,Tabela FIPE (estimado),Fabricante / INMETRO
+441,Mitsubishi Eclipse Cross Advantage,Mitsubishi,SUV,2019,112100.0,114902.49999999999,10.2,12.6,168,1498,4,5,flexivel,automatico,laranja,144528,Tabela FIPE (estimado),Fabricante / INMETRO
+442,Mitsubishi Eclipse Cross SPORT,Mitsubishi,SUV,2020,141900.0,145447.5,9.6,12.6,165,1498,4,5,flexivel,manual,azul,7195,Tabela FIPE (estimado),Fabricante / INMETRO
+443,Land Rover Discovery LS,Land Rover,SUV,2024,367000.0,376174.99999999994,6.5,7.8,268,2993,4,7,diesel,automatica,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+444,Land Rover Discovery 2.0,Land Rover,SUV,2023,253000.0,259324.99999999997,8.0,10.4,241,2993,4,7,diesel,manual,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+445,Land Rover Discovery GL,Land Rover,SUV,2024,370100.0,379352.49999999994,6.6,8.4,360,2993,4,7,diesel,automatica,azul,0,Tabela FIPE (estimado),Fabricante / INMETRO
+446,Land Rover Discovery LX,Land Rover,SUV,2021,384300.0,393907.49999999994,8.1,10.1,267,2993,4,7,diesel,automatica,bege,79205,Tabela FIPE (estimado),Fabricante / INMETRO
+447,Land Rover Evoque DX,Land Rover,SUV,2015,231200.0,236979.99999999997,9.7,12.8,197,1997,4,5,flexivel,cvt,marrom,169696,Tabela FIPE (estimado),Fabricante / INMETRO
+448,Land Rover Evoque LS,Land Rover,SUV,2019,209800.0,215044.99999999997,8.3,9.7,185,1997,4,5,flexivel,cvt,cinza,72583,Tabela FIPE (estimado),Fabricante / INMETRO
+449,Land Rover Evoque LX,Land Rover,SUV,2019,198800.0,203769.99999999997,9.3,11.1,157,1997,4,5,flexivel,automatico,laranja,105931,Tabela FIPE (estimado),Fabricante / INMETRO
+450,Range Rover Sport 1.0,Land Rover,SUV,2015,481100.0,493127.49999999994,8.0,9.6,357,2993,4,5,diesel,manual,verde,101783,Tabela FIPE (estimado),Fabricante / INMETRO
+451,Range Rover Sport LT,Land Rover,SUV,2020,495300.0,507682.49999999994,6.1,7.7,371,2993,4,5,diesel,manual,cinza,132989,Tabela FIPE (estimado),Fabricante / INMETRO
+452,Range Rover Sport GT,Land Rover,SUV,2023,386200.0,395854.99999999994,5.7,6.7,316,2993,4,5,diesel,automatica,marrom,0,Tabela FIPE (estimado),Fabricante / INMETRO
+453,Range Rover Sport LS,Land Rover,SUV,2016,394500.0,404362.49999999994,6.1,8.1,357,2993,4,5,diesel,automatica,cinza,97434,Tabela FIPE (estimado),Fabricante / INMETRO
+454,Volvo XC40 Recharge Sport,Volvo,Eletrico,2022,228800.0,234519.99999999997,47.2,59.8,402,0,4,5,eletrico,automatico,bege,0,Fabricante,Fabricante / INMETRO
+455,Volvo XC40 Recharge 2.0,Volvo,Eletrico,2024,214800.0,220169.99999999997,46.1,57.9,413,0,4,5,eletrico,automatico,branco,0,Fabricante,Fabricante / INMETRO
+456,Volvo XC40 Recharge LTZ,Volvo,Eletrico,2022,249700.0,255942.49999999997,44.1,59.4,414,0,4,5,eletrico,automatico,prata,0,Fabricante,Fabricante / INMETRO
+457,Volvo XC40 Recharge GL,Volvo,Eletrico,2024,217200.0,222629.99999999997,42.5,51.7,405,0,4,5,eletrico,automatico,cinza,0,Fabricante,Fabricante / INMETRO
+458,Volvo XC40 Recharge GT,Volvo,Eletrico,2022,210200.0,215454.99999999997,43.6,56.8,405,0,4,5,eletrico,automatico,laranja,0,Fabricante,Fabricante / INMETRO
+459,Volvo XC40 Recharge SPORT,Volvo,Eletrico,2023,241400.0,247434.99999999997,46.7,54.9,413,0,4,5,eletrico,automatico,verde,0,Fabricante,Fabricante / INMETRO
+460,Volvo XC60 LTZ,Volvo,SUV,2024,246000.0,252149.99999999997,7.6,9.0,237,1969,4,5,flexivel,cvt,branco,0,Tabela FIPE (estimado),Fabricante / INMETRO
+461,Volvo XC60 2.0,Volvo,SUV,2020,202100.0,207152.49999999997,7.5,9.7,218,1969,4,5,flexivel,manual,cinza,81813,Tabela FIPE (estimado),Fabricante / INMETRO
+462,Volvo XC60 LT,Volvo,SUV,2023,260400.0,266910.0,8.4,9.8,195,1969,4,5,flexivel,automatico,azul,0,Tabela FIPE (estimado),Fabricante / INMETRO
+463,Volvo XC60 Advantage,Volvo,SUV,2022,252000.0,258299.99999999997,9.6,11.3,305,1969,4,5,flexivel,manual,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+464,Volvo XC60 2.0,Volvo,SUV,2019,313800.0,321645.0,10.3,12.7,219,1969,4,5,flexivel,manual,vermelho,190622,Tabela FIPE (estimado),Fabricante / INMETRO
+465,Volvo XC60 GL,Volvo,SUV,2017,270800.0,277570.0,8.0,9.8,273,1969,4,5,flexivel,automatico,branco,98354,Tabela FIPE (estimado),Fabricante / INMETRO
+466,Volvo XC90 1.6,Volvo,SUV,2024,419100.0,429577.49999999994,8.2,10.5,255,1969,4,7,flexivel,automatico,branco,0,Tabela FIPE (estimado),Fabricante / INMETRO
+467,Volvo XC90 LX,Volvo,SUV,2022,314600.0,322465.0,7.9,9.8,289,1969,4,7,flexivel,cvt,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+468,Volvo XC90 2.0,Volvo,SUV,2015,301200.0,308730.0,8.2,10.5,319,1969,4,7,flexivel,automatico,laranja,158763,Tabela FIPE (estimado),Fabricante / INMETRO
+469,Porsche Cayenne Sport,Porsche,SUV,2023,493800.0,506144.99999999994,6.9,8.1,327,2995,4,5,flexivel,cvt,bege,0,Tabela FIPE (estimado),Fabricante / INMETRO
+470,Porsche Cayenne GT,Porsche,SUV,2018,505600.0,518239.99999999994,9.0,12.1,391,2995,4,5,flexivel,manual,verde,77424,Tabela FIPE (estimado),Fabricante / INMETRO
+471,Porsche Cayenne,Porsche,SUV,2023,449300.0,460532.49999999994,7.1,9.5,384,2995,4,5,flexivel,manual,vermelho,0,Tabela FIPE (estimado),Fabricante / INMETRO
+472,Porsche Macan 1.6,Porsche,SUV,2018,422000.0,432549.99999999994,9.0,10.6,273,1984,4,5,flexivel,automatico,marrom,19673,Tabela FIPE (estimado),Fabricante / INMETRO
+473,Porsche Macan 1.6,Porsche,SUV,2023,319300.0,327282.5,10.0,12.1,368,1984,4,5,flexivel,manual,branco,0,Tabela FIPE (estimado),Fabricante / INMETRO
+474,Porsche Macan 1.6,Porsche,SUV,2024,286700.0,293867.5,7.9,10.4,330,1984,4,5,flexivel,manual,verde,0,Tabela FIPE (estimado),Fabricante / INMETRO
+475,Porsche Taycan DX,Porsche,Eletrico,2022,577800.0,592245.0,39.6,46.9,541,0,4,4,eletrico,automatico,bege,0,Fabricante,Fabricante / INMETRO
+476,Porsche Taycan SPORT,Porsche,Eletrico,2023,581800.0,596345.0,35.7,46.9,496,0,4,4,eletrico,automatico,preto,0,Fabricante,Fabricante / INMETRO
+477,Porsche Taycan GL,Porsche,Eletrico,2023,594300.0,609157.5,36.9,45.3,572,0,4,4,eletrico,automatico,verde,0,Fabricante,Fabricante / INMETRO
