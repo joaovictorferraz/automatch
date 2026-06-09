@@ -1,6 +1,6 @@
-# AutoMatch 🚗
+# AutoMatch - Sistema de Recomendação de Veículos 🚗 Desenvolvido por João Victor Ferraz.
 
-Sistema de recomendação inteligente de veículos desenvolvido como projeto do **6º semestre** do curso de **Análise e Desenvolvimento de Sistemas**.
+Sistema de recomendação inteligente de veículos desenvolvido como projeto do **6º semestre** do curso de **Gestão da Tecnologia da Informação**.
 
 **Link para teste:** [https://automatch-29ds.onrender.com/](https://automatch-29ds.onrender.com/)
 
@@ -121,4 +121,4 @@ automatch/
 
 ## Licença
 
-Projeto acadêmico sem fins comerciais.
+Projeto acadêmico sem fins comerciais, até o momento. Feito por João Victor Ferraz
