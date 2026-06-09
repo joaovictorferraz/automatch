@@ -8,14 +8,18 @@ import json
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-BASE_URL = "https://parallelum.com.br/fipe/api/v1/carros/marcas"
+TOKEN = os.environ.get("FIPE_TOKEN") or "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJiOTAwZDRmYS03NGExLTRlYWItYjQ1ZS1mZGI2ZDFjODczODEiLCJlbWFpbCI6ImpvYW92aWN0b3JmZXJyYXowMUBnbWFpbC5jb20iLCJpYXQiOjE3ODEwMDEzMzh9.NStnk6188FRsH6nYRyqUgIzglJC54m6oS3g16v6B0lw"
+BASE_URL = "https://fipe.parallelum.com.br/api/v2"
 LIMITE_REGISTROS = 400
 OUTPUT_PATH = os.path.join(os.path.dirname(__file__), "..", "dataset", "vehicles.csv")
 
 CORES = ["preto", "branco", "prata", "cinza", "azul", "vermelho", "verde"]
 
 session = requests.Session()
-session.headers.update({"User-Agent": "AutoMatch/1.0"})
+session.headers.update({
+    "User-Agent": "AutoMatch/1.0",
+    "Authorization": f"Bearer {TOKEN}"
+})
 
 MODELOS_POPULARES = {
     "Fiat": ["ARGO", "CRONOS", "STRADA", "MOBI", "PULSE", "TORO", "UNO"],
@@ -58,27 +62,19 @@ VEICULOS_CONHECIDOS = [
     ("Ford", "Ford EcoSport"), ("Ford", "Ford Ka"), ("Ford", "Ford Fusion"),
 ]
 
-DADOS_FIPE_REAIS = [
-    {"nome": "500 ABARTH MULTIAIR 1.4 TB 16V 3p", "marca": "Fiat", "ano": 2015, "preco": 119693.0},
-    {"nome": "500 Cabrio Dualogic Flex 1.4 8V", "marca": "Fiat", "ano": 2017, "preco": 71884.0},
-    {"nome": "AMAROK CD2.0 16V/S CD2.0 16V TDI 4x2 Die", "marca": "VW - VolksWagen", "ano": 2013, "preco": 72999.0},
-    {"nome": "AMAROK CD2.0 16V/S CD2.0 16V TDI 4x4 Die", "marca": "VW - VolksWagen", "ano": 2019, "preco": 94018.0},
-    {"nome": "AMAROK Comfor. 3.0 V6 TDI 4x4 Dies. Aut.", "marca": "VW - VolksWagen", "ano": 2025, "preco": 269774.0},
-    {"nome": "AMAROK Comfor. CD 2.0 TDI 4x4 Dies. Aut.", "marca": "VW - VolksWagen", "ano": 2022, "preco": 143988.0},
-    {"nome": "AMAROK CS2.0 16V/S2.0 16V TDI 4x2 Diesel", "marca": "VW - VolksWagen", "ano": 2014, "preco": 76260.0},
-    {"nome": "Accord Sedan EX 2.0 16V 156cv Aut.", "marca": "Honda", "ano": 2012, "preco": 67581.0},
-    {"nome": "Accord Sedan 2.0 TB 16V Aut. (Híbrido)", "marca": "Honda", "ano": 2025, "preco": 270925.0},
-    {"nome": "Cherokee Limited 3.2 4x4 V6 Aut.", "marca": "Jeep", "ano": 2015, "preco": 90546.0},
-    {"nome": "350Z 3.5 V6 280cv/ 312cv 2p", "marca": "Nissan", "ano": 2009, "preco": 286179.0},
-    {"nome": "Bronco Sport Badlands 2.0L TB 4WD Aut.", "marca": "Ford", "ano": 2025, "preco": 234624.0},
-]
+req_count = 0
 
 def get_json(url):
+    global req_count
     for tentativa in range(3):
         try:
             response = session.get(url, timeout=20, verify=False)
+            req_count += 1
             if response.status_code == 429:
                 print("  [rate limit atingido]")
+                return None
+            if response.status_code == 402:
+                print("  [payment required]")
                 return None
             response.raise_for_status()
             return response.json()
@@ -149,7 +145,7 @@ PRECOS_FIPE_2025 = {
     "captur":     (85000, 115000),"ecosport":   (70000, 95000),
     "renegade":   (95000, 135000),"compass":    (140000, 200000),
     "duster":     (80000, 110000),"pulse":      (70000, 95000),
-    "fusion":     (90000, 130000),"torque":     (90000, 120000), # placeholders
+    "fusion":     (90000, 130000),
     "corolla cross": (140000, 180000),
     "hilux":      (180000, 270000),"ranger":    (180000, 280000),
     "s10":        (170000, 250000),"amarok":    (190000, 300000),
@@ -191,56 +187,69 @@ def montar_registro(id_reg, nome, marca, categoria, ano, preco, specs, fonte_pre
         "fonte_especificacoes": "Fabricante / INMETRO"
     }
 
+def parse_preco(price_str):
+    try:
+        return float(price_str.replace("R$", "").replace(".", "").replace(",", ".").strip())
+    except:
+        return None
+
 def gerar_via_api():
+    global req_count
     dados = []
     id_atual = 1
+    MAX_POR_MARCA = max(30, LIMITE_REGISTROS // len(MARCAS_FIPE))
 
-    for nome_marca, codigo_marca in MARCAS_FIPE.items():
+    marcas_ordem = list(MARCAS_FIPE.items())
+    random.shuffle(marcas_ordem)
+
+    for nome_marca, codigo_marca in marcas_ordem:
         if len(dados) >= LIMITE_REGISTROS:
             break
+        cont_marca = 0
 
-        modelos_json = get_json(f"{BASE_URL}/{codigo_marca}/modelos")
+        modelos_json = get_json(f"{BASE_URL}/cars/brands/{codigo_marca}/models")
         if not modelos_json:
             continue
 
         modelos_pop = MODELOS_POPULARES.get(nome_marca, [])
         modelos_filtrados = [
-            m for m in modelos_json["modelos"]
-            if any(p.lower() in m["nome"].lower() for p in modelos_pop)
+            m for m in modelos_json
+            if any(p.lower() in m["name"].lower() for p in modelos_pop)
         ]
+        if not modelos_filtrados:
+            modelos_filtrados = modelos_json[:30]
 
-        for modelo in modelos_filtrados[:4]:
-            if len(dados) >= LIMITE_REGISTROS:
+        random.shuffle(modelos_filtrados)
+
+        for modelo in modelos_filtrados:
+            if len(dados) >= LIMITE_REGISTROS or cont_marca >= MAX_POR_MARCA:
                 break
 
-            anos = get_json(f"{BASE_URL}/{codigo_marca}/modelos/{modelo['codigo']}/anos")
+            anos = get_json(f"{BASE_URL}/cars/brands/{codigo_marca}/models/{modelo['code']}/years")
             if not anos:
                 continue
 
-            for ano in anos[:2]:
-                if len(dados) >= LIMITE_REGISTROS:
+            anos = anos[-4:]
+
+            for ano in anos:
+                if len(dados) >= LIMITE_REGISTROS or cont_marca >= MAX_POR_MARCA:
                     break
 
-                ficha = get_json(
-                    f"{BASE_URL}/{codigo_marca}/modelos/{modelo['codigo']}/anos/{ano['codigo']}"
-                )
+                ficha = get_json(f"{BASE_URL}/cars/brands/{codigo_marca}/models/{modelo['code']}/years/{ano['code']}")
                 if not ficha:
                     continue
 
-                try:
-                    preco = float(ficha["Valor"].replace("R$", "").replace(".", "").replace(",", ".").strip())
-                except:
+                preco = parse_preco(ficha.get("price", ""))
+                if not preco or preco < 15000:
                     continue
 
-                if preco < 15000:
-                    continue
-
-                categoria = detectar_categoria(ficha["Modelo"])
-                specs = gerar_especificacoes(ficha["Modelo"], categoria)
-                dados.append(montar_registro(id_atual, ficha["Modelo"], ficha["Marca"],
-                    categoria, ficha["AnoModelo"], preco, specs, "Tabela FIPE"))
+                categoria = detectar_categoria(ficha["model"])
+                specs = gerar_especificacoes(ficha["model"], categoria)
+                dados.append(montar_registro(id_atual, ficha["model"], ficha["brand"],
+                    categoria, ficha["modelYear"], preco, specs, "Tabela FIPE"))
                 id_atual += 1
-                print(f"  FIPE #{id_atual-1:3d}: R$ {preco:>8.2f} | {nome_marca} {ficha['Modelo']}")
+                cont_marca += 1
+                print(f"  FIPE #{id_atual-1:3d}: R$ {preco:>9.2f} | {nome_marca:16s} {ficha['model']:45s} ({ficha['modelYear']})")
 
     return dados, id_atual
 
@@ -266,11 +275,11 @@ if "--sintetico" in sys.argv:
     print("Modo sintetico...")
     dados_finais = gerar_sintetico(LIMITE_REGISTROS)
 else:
-    print("Buscando precos reais na API FIPE...")
+    print("Buscando precos reais na API FIPE v2...")
     api_data, id_counter = gerar_via_api()
     if api_data:
         dados_finais.extend(api_data)
-        print(f"\nObtidos {len(api_data)} precos reais da FIPE API")
+        print(f"\nObtidos {len(api_data)} precos reais da FIPE API ({req_count} requisicoes)")
 
     if len(dados_finais) < LIMITE_REGISTROS:
         restante = LIMITE_REGISTROS - len(dados_finais)
@@ -281,9 +290,9 @@ df = pd.DataFrame(dados_finais)
 os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
 df.to_csv(OUTPUT_PATH, index=False, encoding="utf-8-sig")
 
+api_count = len(api_data) if 'api_data' in dir() and api_data else 0
 print(f"\nDataset gerado com {len(df)} registros em: {OUTPUT_PATH}")
 print(f"Marcas: {sorted(df['marca'].unique())}")
 print(f"Categorias: {sorted(df['categoria'].unique())}")
 print(f"Preco: R$ {df['preco'].min():.2f} - R$ {df['preco'].max():.2f}")
-api_count = len(api_data) if 'api_data' in dir() and api_data else 0
-print(f"FIPE real: {api_count} registros")
+print(f"FIPE real: {api_count} registros, {req_count} requisicoes")
