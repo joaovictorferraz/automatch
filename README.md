@@ -10,7 +10,7 @@ Sistema de recomendação inteligente de veículos desenvolvido como projeto do 
 
 O AutoMatch é uma aplicação web que ajuda o usuário a encontrar o veículo ideal com base em suas preferências pessoais. Diferente de filtros tradicionais (onde você apenas seleciona marca/modelo), o AutoMatch calcula um **score de compatibilidade** entre o usuário e cada veículo do dataset, considerando múltiplos critérios simultaneamente.
 
-Os preços são 100% reais obtidos da **Tabela FIPE** oficial via [api.fipe.online](https://fipe.online), garantindo que as recomendações reflitam o valor real de mercado dos veículos.
+Os preços são 100% reais obtidos da **Tabela FIPE** oficial via [FIPE Online](https://fipe.online) (API v2 em `fipe.parallelum.com.br/api/v2`, autenticada via Bearer token), garantindo que as recomendações reflitam o valor real de mercado dos veículos.
 
 ---
 
