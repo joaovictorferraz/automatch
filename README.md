@@ -47,8 +47,8 @@ Endpoints públicos disponíveis:
 
 ## Dataset
 
-- **400 veículos** com preços reais da Tabela FIPE (junho/2026)
-- **10 marcas:** Fiat, Volkswagen, Chevrolet, Toyota, Honda, Hyundai, Renault, Jeep, Nissan, Ford
+- **660 veículos** com preços 100% reais da Tabela FIPE (junho/2026)
+- **22 marcas:** Audi, BMW, BYD, Caoa Chery, Citroën, Fiat, Ford, GM - Chevrolet, GWM, Honda, Hyundai, Jeep, Land Rover, Mercedes-Benz, Mitsubishi, Nissan, Peugeot, Porsche, Renault, Toyota, Volkswagen, Volvo
 - **4 categorias:** Hatch, Sedan, SUV, Picape
 - As especificações técnicas (potência, consumo, cilindrada, câmbio) são baseadas em dados reais de fábrica / INMETRO
 - Fonte dos preços: `Tabela FIPE` via api.fipe.online
@@ -109,7 +109,7 @@ automatch/
 ├── database.sql             # Schema do banco de dados (MySQL)
 ├── db_config.php            # Configuração de banco (legado)
 ├── dataset/
-│   └── vehicles.csv         # Dataset com 400 veículos
+│   └── vehicles.csv         # Dataset com 660 veículos (22 marcas)
 ├── scripts/
 │   ├── gerar_dataset.py     # Gerador do dataset via API FIPE
 │   └── fipe_client.py       # Cliente de consulta FIPE

@@ -10,7 +10,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 TOKEN = os.environ.get("FIPE_TOKEN") or "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJiOTAwZDRmYS03NGExLTRlYWItYjQ1ZS1mZGI2ZDFjODczODEiLCJlbWFpbCI6ImpvYW92aWN0b3JmZXJyYXowMUBnbWFpbC5jb20iLCJpYXQiOjE3ODEwMDEzMzh9.NStnk6188FRsH6nYRyqUgIzglJC54m6oS3g16v6B0lw"
 BASE_URL = "https://fipe.parallelum.com.br/api/v2"
-LIMITE_REGISTROS = 400
+LIMITE_REGISTROS = 600
 OUTPUT_PATH = os.path.join(os.path.dirname(__file__), "..", "dataset", "vehicles.csv")
 
 CORES = ["preto", "branco", "prata", "cinza", "azul", "vermelho", "verde"]
@@ -32,12 +32,28 @@ MODELOS_POPULARES = {
     "Jeep": ["COMPASS", "RENEGADE", "CHEROKEE", "WRANGLER"],
     "Nissan": ["KICKS", "VERSA", "FRONTIER", "SENTRA"],
     "Ford": ["RANGER", "ECOSPORT", "KA", "FIESTA", "FOCUS", "FUSION"],
+    "BYD": ["DOLPHIN", "SEAL", "YUAN", "SONG", "HAN", "KING"],
+    "BMW": ["320I", "X1", "X3", "X5", "X6", "IX", "I4", "M3", "M4"],
+    "Mercedes-Benz": ["C180", "C200", "GLA", "GLC", "GLE", "CLA", "A200"],
+    "Audi": ["A3", "A4", "Q3", "Q5", "Q7", "E-TRON"],
+    "Peugeot": ["208", "2008", "3008", "EXPERT", "PARTNER", "LANDTREK"],
+    "Citroën": ["C3", "C4", "AIRCROSS", "JUMPER"],
+    "GWM": ["HAVAL", "ORA", "POER"],
+    "Caoa Chery": ["TIGGO", "ICAR", "QQ"],
+    "Land Rover": ["EVOQUE", "VELAR", "SPORT", "DISCOVERY"],
+    "Volvo": ["XC40", "XC60", "XC90", "S60", "S90", "V60"],
+    "Porsche": ["CAYENNE", "MACAN", "PANAMERA", "911", "TAYCAN"],
+    "Mitsubishi": ["OUTLANDER", "LANCER", "PAJERO", "ASX", "TR4"],
 }
 
 MARCAS_FIPE = {
     "Fiat": 21, "VW - VolksWagen": 59, "GM - Chevrolet": 23, "Toyota": 56,
     "Honda": 25, "Hyundai": 26, "Renault": 48, "Jeep": 29,
-    "Nissan": 43, "Ford": 22
+    "Nissan": 43, "Ford": 22,
+    "BYD": 238, "BMW": 7, "Mercedes-Benz": 39,
+    "Audi": 6, "Peugeot": 44, "Citroën": 13, "GWM": 240,
+    "Caoa Chery": 245, "Land Rover": 33, "Volvo": 58,
+    "Porsche": 47, "Mitsubishi": 41,
 }
 
 VEICULOS_CONHECIDOS = [
@@ -60,6 +76,18 @@ VEICULOS_CONHECIDOS = [
     ("Jeep", "Jeep Renegade"), ("Nissan", "Nissan Kicks"),
     ("Nissan", "Nissan Versa"), ("Ford", "Ford Ranger"),
     ("Ford", "Ford EcoSport"), ("Ford", "Ford Ka"), ("Ford", "Ford Fusion"),
+    ("BYD", "BYD Dolphin"), ("BYD", "BYD Seal"), ("BYD", "BYD Yuan Plus"),
+    ("BMW", "BMW 320i"), ("BMW", "BMW X1"), ("BMW", "BMW X3"),
+    ("Mercedes-Benz", "Mercedes-Benz C180"), ("Mercedes-Benz", "Mercedes-Benz GLA"),
+    ("Audi", "Audi A3"), ("Audi", "Audi Q3"), ("Audi", "Audi Q5"),
+    ("Peugeot", "Peugeot 208"), ("Peugeot", "Peugeot 2008"),
+    ("Citroën", "Citroën C3"), ("Citroën", "Citroën Aircross"),
+    ("GWM", "GWM Haval H6"), ("GWM", "GWM ORA 03"),
+    ("Caoa Chery", "Caoa Chery Tiggo 5X"), ("Caoa Chery", "Caoa Chery Tiggo 7"),
+    ("Land Rover", "Land Rover Discovery"), ("Land Rover", "Land Rover Evoque"),
+    ("Volvo", "Volvo XC40"), ("Volvo", "Volvo XC60"),
+    ("Porsche", "Porsche Cayenne"), ("Porsche", "Porsche Macan"),
+    ("Mitsubishi", "Mitsubishi Outlander"), ("Mitsubishi", "Mitsubishi Lancer"),
 ]
 
 req_count = 0
@@ -89,12 +117,25 @@ def detectar_categoria(nome):
     nome_lower = nome.lower()
     if any(x in nome_lower for x in [
         "compass","renegade","kicks","creta","t-cross","nivus",
-        "pulse","tracker","hr-v","corolla cross","ecosport","captur"
+        "pulse","tracker","hr-v","corolla cross","ecosport","captur",
+        "haval","tiggo","evoque","velar","xc40","xc60","xc90",
+        "outlander","pajero","asx","tr4","glc","gle","gla","glb",
+        "q3","q5","q7","x1","x3","x5","x6","cayenne","macan",
+        "dolphin","yuan","song","t-cross","2008","3008","aircross",
+        "landtrek","discovery","ix", "etron", "q8",
     ]):
         return "SUV"
-    if any(x in nome_lower for x in ["hilux","ranger","s10","amarok","frontier","strada","saveiro"]):
+    if any(x in nome_lower for x in [
+        "hilux","ranger","s10","amarok","frontier","strada","saveiro",
+        "poer",
+    ]):
         return "Picape"
-    if any(x in nome_lower for x in ["corolla","civic","cronos","onix plus","versa","virtus","city","fusion"]):
+    if any(x in nome_lower for x in [
+        "corolla","civic","cronos","onix plus","versa","virtus","city","fusion",
+        "a3","a4","a5","a6","s60","s90","320i","c180","c200","a200",
+        "s60","s90","panamera","911","taycan","seal","han","king",
+        "lancer",
+    ]):
         return "Sedan"
     return "Hatch"
 
@@ -151,6 +192,36 @@ PRECOS_FIPE_2025 = {
     "s10":        (170000, 250000),"amarok":    (190000, 300000),
     "frontier":   (160000, 240000),"strada":    (80000, 110000),
     "saveiro":    (70000, 95000),
+    "dolphin":    (115000, 150000),"seal":      (180000, 230000),
+    "yuan":       (140000, 180000),"song":      (120000, 160000),
+    "han":        (220000, 270000),"king":      (170000, 210000),
+    "320i":       (180000, 240000),"x1":        (220000, 290000),
+    "x3":         (280000, 350000),"x5":        (380000, 500000),
+    "x6":         (420000, 550000),"ix":        (350000, 450000),
+    "i4":         (300000, 400000),"m3":        (400000, 500000),
+    "c180":       (120000, 160000),"c200":      (150000, 200000),
+    "gla":        (180000, 240000),"glc":        (240000, 320000),
+    "gle":        (350000, 480000),"cla":        (160000, 220000),
+    "a200":       (130000, 170000),"a3":        (130000, 170000),
+    "a4":         (170000, 230000),"q3":        (170000, 230000),
+    "q5":         (260000, 350000),"q7":        (380000, 500000),
+    "etron":      (350000, 450000),
+    "208":        (60000, 80000), "2008":       (85000, 115000),
+    "3008":       (130000, 170000),"partner":   (70000, 95000),
+    "c3":         (50000, 70000), "aircross":   (70000, 95000),
+    "jumper":     (160000, 220000),
+    "haval":      (140000, 190000),"ora":       (120000, 150000),
+    "tiggo":      (80000, 130000),"icar":       (90000, 120000),
+    "evoque":     (220000, 300000),"velar":     (320000, 420000),
+    "discovery":  (350000, 500000),"sport":     (280000, 380000),
+    "xc40":       (200000, 270000),"xc60":      (270000, 360000),
+    "xc90":       (380000, 500000),"s60":       (200000, 270000),
+    "s90":        (300000, 400000),"v60":       (230000, 300000),
+    "cayenne":    (450000, 650000),"macan":     (350000, 480000),
+    "panamera":   (500000, 700000),"911":       (650000, 900000),
+    "taycan":     (500000, 700000),
+    "outlander":  (110000, 160000),"lancer":    (70000, 100000),
+    "pajero":     (180000, 280000),"asx":       (80000, 110000),
 }
 
 def gerar_preco_realista(nome, ano):
